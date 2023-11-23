@@ -6,7 +6,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'Контакты',
+  title: 'Вакантные места',
   description: 'UrFU Student Recovery and Transfer Service',
 }
 
