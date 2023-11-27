@@ -1,6 +1,5 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import Image from "next/image";
 import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import TagButton from "./TagButton";
@@ -94,8 +93,8 @@ const AboutSection = () => {
 
   return (
     <section className="text-zinc-700" id="about">
-      <div className="w-[1430px] h-[2px] top-[762px] ml-0 absolute bg-neutral-400"></div>
-      <div className="md:grid md:grid-cols-2 gap-8 items-center mt-64 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="w-[1430px] h-[1px] top-[773px] ml-0 absolute bg-neutral-400"></div>
+      <div className="md:grid md:grid-cols-2 gap-8 items-center mt-72 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="mt-4 md:mt-0 text-center flex flex-col h-full">
           <div className="flex flex-row ml-[498px] lowercase">
           <TagButton
@@ -134,7 +133,6 @@ const AboutSection = () => {
       </ul>
       <br/>
       <br/>
-      <Image src="/line.png" width={1427} height={200} />
     </section>
   );
 };
