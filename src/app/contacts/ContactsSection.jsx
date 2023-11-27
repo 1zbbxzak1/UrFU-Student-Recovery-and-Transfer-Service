@@ -77,7 +77,7 @@ const ContactsSection = () => {
                   <div>Начальник отдела организации<br/>образовательной деятельности</div>
                 </td>
                 <td>
-                <div>+7 (343) 371-56-04 (доб. 117),<br/>e.g.zagorodnova@urfu.ru</div>
+                <div>+7 (343) 371-56-04,<br/>e.g.zagorodnova@urfu.ru</div>
                 </td>
               </tr>
               <tr>
