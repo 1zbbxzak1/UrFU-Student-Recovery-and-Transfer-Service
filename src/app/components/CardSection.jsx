@@ -96,9 +96,8 @@ const AboutSection = () => {
 
   return (
     <section className="text-zinc-700" id="about">
-      <div className="relative h-[1px] top-[405px] mr-3.5 bg-neutral-400"></div>
-      <div className="items-center mt-72 py-8 px-4 sm:py-16 xl:px-16">
-        <div className="mt-4 md:mt-0 text-center flex flex-col items-center h-full">
+      <div className="items-center px-4 sm:py-16 xl:px-16">
+        <div className="text-center flex flex-col items-center mb-12 lg:mb-0 h-full">
           <div className="flex flex-row relative lowercase">
             <TagButton
               name="Восстановление"
@@ -115,9 +114,10 @@ const AboutSection = () => {
               Перевод
             </TagButton>
           </div>
+          <div className="w-full lg:w-[1280px] h-[1px] ml-0 mr-0 bg-neutral-400" />
         </div>
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="mx-0 lg:mx-20 grid md:grid-cols-3 gap-4 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -134,8 +134,6 @@ const AboutSection = () => {
           </motion.li>
         ))}
       </ul>
-      <br />
-      <br />
     </section>
   );
 };

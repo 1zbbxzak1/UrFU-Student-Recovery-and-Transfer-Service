@@ -9,7 +9,7 @@ const ProjectCard = ({ title, gitUrl }) => {
 
   return (
     <div>
-    <div className="relative h-2.5 bg-[#2951b6]" />
+    <div className="h-2.5 bg-[#2951b6]" />
       <div className="u-card">
         {title}
         <Link href={gitUrl}>
