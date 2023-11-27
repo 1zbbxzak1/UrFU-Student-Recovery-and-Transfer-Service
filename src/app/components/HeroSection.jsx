@@ -8,12 +8,12 @@ const HeroSection = () => {
         <div className="w-full h-[540px] absolute top-0 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500" />
         <div className="w-full lg:w-[1280px] h-[500px] sm:h-[500px] md:h-[550px] lg:h-[550px] relative bg-[#748AB9] rounded-bl-[70px] rounded-br-[70px]">
           <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
-            <h1 className="text-white mt-[50px] mb-[35px] mx-14 text-3xl sm:text-5xl lg:text-5xl lg:leading-normal font-bold">
+            <h1 className="text-white mt-[50px] mb-[35px] mx-4 text-xl text-left sm:text-5xl lg:text-5xl lg:leading-normal lg:mx-14 font-bold">
               Сервис восстановления и <br />
               перевода студентов УрФУ
             </h1>
-            <div className="h-[0px] lg:w-[700px] relative mx-14 mb-[35px] border border-white" />
-            <p className="w-[300px] lg:w-[700px] text-white ml-14 text-xs text-left sm:text-lg lg:text-xl font-light">
+            <div className="h-[0px] lg:w-[700px] relative mx-4 lg:mx-14 mb-[35px] border border-white" />
+            <p className="lg:w-[700px] text-white mx-4 lg:mx-14 text-xs text-left sm:text-lg lg:text-xl font-light">
               Сделайте процесс восстановления и перевода студентов УрФУ
               удобным с нашим онлайн-сервисом. Получайте актуальную
               информацию, подавайте документы для проверки, и решайте
