@@ -61,6 +61,9 @@
   );
   transform: scaleX(-1);
 }
+.u-table table tbody tr:nth-child(2n+1) {
+  background: rgba(202, 209, 225, 0.50);
+}
 .u-table table tbody tr {
   background-color: #fff;
 }
@@ -101,9 +104,9 @@
 .u-table table tbody tr:last-child td {
   border: none;
 }
-.u-table table tbody tr:hover {
+/* .u-table table tbody tr:hover {
   background-color: #e9ecf1;
-}
+} */
 body {
   background-color: #f5f5f5;
   margin: 0;
