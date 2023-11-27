@@ -4,10 +4,10 @@ import React from "react";
 const ContactsSection = () => {
   return (
     <main className="mt-10 mb-10">
-      <h2 className="mb-10 text-center text-zinc-700">
-        Ответственные от институтов УрФУ
+      <h2 className="mb-10 text-left text-zinc-700">
+        Ответственные от институтов УрФУ за
         <br />
-        за перевод и восстановление студентов
+        перевод и восстановление студентов
       </h2>
       <div class="u-table">
         <table class="table">
