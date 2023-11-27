@@ -27,7 +27,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="w-full mx-auto top-0 left-0 right-0 z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
+    <nav className="w-full h-[100px] mx-auto top-0 left-0 right-0 z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
