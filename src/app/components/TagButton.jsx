@@ -8,10 +8,10 @@ const variants = {
 
 const TagButton = ({ name, onClick, isSelected, children }) => {
   const buttonStyles = isSelected
-    ? "text-zinc-700"
-    : "text-zinc-700";
+    ? "text-[#393E46]"
+    : "text-[#393E46]";
 
-  const buttonClasses = isSelected ? "text-zinc-700" : "text-[#ADB7BE]";
+  const buttonClasses = isSelected ? "text-[#393E46]" : "text-[#393E46]";
 
   return (
     <button

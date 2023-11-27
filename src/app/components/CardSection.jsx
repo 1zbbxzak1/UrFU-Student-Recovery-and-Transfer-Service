@@ -40,7 +40,8 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Перевод на другое направление внутри института с бюджета на контракт",
+    title:
+      "Перевод на другое направление внутри института с бюджета на контракт",
     description: "Transfer 1 description",
     tag: ["Перевод"],
     gitUrl: "/",
@@ -48,7 +49,8 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Перевод на другое направление в другой институт с бюджета на бюджет",
+    title:
+      "Перевод на другое направление в другой институт с бюджета на бюджет",
     description: "Transfer 1 description",
     tag: ["Перевод"],
     gitUrl: "/",
@@ -56,7 +58,8 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Перевод на другое направление в другой институт с бюджета на контракт",
+    title:
+      "Перевод на другое направление в другой институт с бюджета на контракт",
     description: "Transfer 1 description",
     tag: ["Перевод"],
     gitUrl: "/",
@@ -94,23 +97,23 @@ const AboutSection = () => {
   return (
     <section className="text-zinc-700" id="about">
       <div className="relative h-[1px] top-[405px] mr-3.5 bg-neutral-400"></div>
-      <div className="md:grid md:grid-cols-2 gap-8 items-center mt-72 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <div className="mt-4 md:mt-0 text-center flex flex-col h-full">
-          <div className="flex flex-row ml-[498px] lowercase">
-          <TagButton
-            name="Восстановление"
-            onClick={handleTagChange}
-            isSelected={tag === "Восстановление"}
-          >
-            Восстановление
-          </TagButton>
-          <TagButton
-            name="Перевод"
-            onClick={handleTagChange}
-            isSelected={tag === "Перевод"}
-          >
-            Перевод
-          </TagButton>
+      <div className="items-center mt-72 py-8 px-4 sm:py-16 xl:px-16">
+        <div className="mt-4 md:mt-0 text-center flex flex-col items-center h-full">
+          <div className="flex flex-row relative lowercase">
+            <TagButton
+              name="Восстановление"
+              onClick={handleTagChange}
+              isSelected={tag === "Восстановление"}
+            >
+              Восстановление
+            </TagButton>
+            <TagButton
+              name="Перевод"
+              onClick={handleTagChange}
+              isSelected={tag === "Перевод"}
+            >
+              Перевод
+            </TagButton>
           </div>
         </div>
       </div>
@@ -131,8 +134,8 @@ const AboutSection = () => {
           </motion.li>
         ))}
       </ul>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </section>
   );
 };
