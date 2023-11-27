@@ -18,10 +18,10 @@ const navLinks = [
     title: "КОНТАКТЫ",
     href: "/contacts",
   },
-  {
-    title: "ЛИЧНЫЙ КАБИНЕТ",
-    href: "/dashboard",
-  },
+  // {
+  //   title: "ЛИЧНЫЙ КАБИНЕТ",
+  //   href: "/dashboard",
+  // },
 ];
 
 const Navbar = () => {
@@ -31,12 +31,6 @@ const Navbar = () => {
     <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-opacity-100">
       <div className="w-full h-[100px] left-0 top-0 absolute bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500">
         <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-          <Link
-            href={"/"}
-            className="text-2xl md:text-5xl ml-8 mt-0 text-white font-semibold"
-          >
-            LOGO
-          </Link>
           <div className="mobile-menu block md:hidden">
             {!navbarOpen ? (
               <button
@@ -55,7 +49,7 @@ const Navbar = () => {
             )}
           </div>
           <div className="menu hidden md:block md:w-auto" id="navbar">
-            <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-5 mr-11">
+            <ul className="flex p-4 md:p-0 md:flex-row md:space-x-16 ml-11 mt-5">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink href={link.href} title={link.title} />
@@ -66,6 +60,20 @@ const Navbar = () => {
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+
+      {/* Добавить реализацию кнопок "Войти" и "Зарегестрировться" в Navbar */}
+      {/* "Войти": переход на новую страницу, где будет необходимо ввести логин и пароль,
+          после нажатия кнопки "Войти" получить данные из базы о пользователе и дать ему войти, 
+          если же такого пользователя нет в базе, то перенаправить на регистрацию (свои шаги),
+          после завершения всех процедур перенаправить пользователя в личный кабинет, а сверху
+          появится в Navbar кнопка "Личный кабинет" с правого угла
+      */}
+      {/* "Зарегестрироваться": переход на новую страницу,
+          где будет необходимо ввести: Фамилию, Имя, Отчество, E-Mail (логин), Телефон, Придумайте пароль (дважды), Согласие на ОПД и ППД,
+          после нажатия кнопки "Зарегестрироваться", переход в личный кабинет и
+          появление в Navbar кнопки "Личный кабинет" с правого угла
+      */}
+
     </nav>
   );
 };
