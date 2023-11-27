@@ -4,7 +4,7 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="my-12 lg:my-20 mx-0 lg:mx-20"
+      className="mx-[-15px] my-12 lg:my-20 lg:mx-20"
     >
       <div className="mb-12">
         <h2 className="text-2xl lg:text-4xl font-semibold text-zinc-700 mb-10">
