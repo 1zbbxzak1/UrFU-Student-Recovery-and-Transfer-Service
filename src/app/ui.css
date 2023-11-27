@@ -1630,7 +1630,7 @@ button {
 }
 .u-accordion-content {
   max-height: 0;
-  width: 950px;
+  max-width: 950px;
   font-size: 18px;
   font-weight: 500;
   color: #2951B6;
