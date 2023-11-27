@@ -27,35 +27,33 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
-      <div className="w-full h-[50px] lg:h-[100px] relative bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500">
-        <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-          <div className="mobile-menu block md:hidden">
-            {!navbarOpen ? (
-              <button
-                onClick={() => setNavbarOpen(true)}
-                className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-              >
-                <Bars3Icon className="h-5 w-5" />
-              </button>
-            ) : (
-              <button
-                onClick={() => setNavbarOpen(false)}
-                className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-              >
-                <XMarkIcon className="h-5 w-5" />
-              </button>
-            )}
-          </div>
-          <div className="menu hidden md:block md:w-auto" id="navbar">
-            <ul className="flex p-4 md:p-0 md:flex-row md:space-x-16 ml-[120px] mt-5">
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <NavLink href={link.href} title={link.title} />
-                </li>
-              ))}
-            </ul>
-          </div>
+    <nav className="w-full mx-auto top-0 left-0 right-0 z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
+      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+        <div className="mobile-menu block md:hidden">
+          {!navbarOpen ? (
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <Bars3Icon className="h-5 w-5" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <XMarkIcon className="h-5 w-5" />
+            </button>
+          )}
+        </div>
+        <div className="menu hidden md:block md:w-auto" id="navbar">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-16 ml-[120px] mt-5">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <NavLink href={link.href} title={link.title} />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
@@ -72,7 +70,6 @@ const Navbar = () => {
           после нажатия кнопки "Зарегестрироваться", переход в личный кабинет и
           появление в Navbar кнопки "Личный кабинет" с правого угла
       */}
-
     </nav>
   );
 };
