@@ -1,7 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import AboutSection from "./components/AboutSection";
-import EmailSection from "./components/FAQSection";
+import CardSection from "./components/CardSection";
+import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
       <Navbar />
       <div className="container mt-28 mx-auto px-12">
         <HeroSection />
-        <AboutSection />
-        <EmailSection />
+        <CardSection />
+        <FAQSection />
       </div>
       <Footer />
     </main>

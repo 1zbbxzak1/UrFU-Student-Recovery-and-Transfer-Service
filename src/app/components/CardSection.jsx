@@ -93,7 +93,7 @@ const AboutSection = () => {
 
   return (
     <section className="text-zinc-700" id="about">
-      <div className="w-[1430px] h-[1px] top-[773px] ml-0 absolute bg-neutral-400"></div>
+      <div className="relative h-[1px] top-[405px] mr-3.5 bg-neutral-400"></div>
       <div className="md:grid md:grid-cols-2 gap-8 items-center mt-72 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="mt-4 md:mt-0 text-center flex flex-col h-full">
           <div className="flex flex-row ml-[498px] lowercase">
@@ -114,7 +114,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 mt-[-90px]">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
