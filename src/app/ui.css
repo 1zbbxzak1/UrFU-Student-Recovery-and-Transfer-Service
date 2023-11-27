@@ -1572,14 +1572,14 @@ button {
 }
 .u-accordion {
   border-left: 4px solid #748ab9;
-  width: 1120px;
+  max-width: 1120px;
   padding-left: 20px;
   position: relative;
   overflow: hidden;
 }
 .u-accordion-title {
   display: block;
-  width: 950px;
+  max-width: 950px;
   font-size: 28px;
   font-weight: 500;
   line-height: 34.13px;
