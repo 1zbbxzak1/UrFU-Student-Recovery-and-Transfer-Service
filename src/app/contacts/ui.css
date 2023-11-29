@@ -17,28 +17,17 @@
 .u-table table th,
 .u-table table td {
   text-align: left;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .u-table table thead tr th {
   color: #1e4391;
+  font-size: 20px;
+  font-weight: 600;
   border-bottom: 2px solid #1e4391;
-  padding: 18px 20px;
-}
-.u-table table thead tr th .sort {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-.u-table table thead tr th .sort:after {
-  position: absolute;
-  content: "";
-  top: 4px;
-  right: 0;
-  width: 10px;
-  height: 16px;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.61597 0.461158L0.683495 5.18013C0.412109 5.5058 0.643687 6.00023 1.06761 6.00023H8.93256C9.35648 6.00023 9.58806 5.5058 9.31668 5.18013L5.3842 0.461158C5.1843 0.221281 4.81587 0.22128 4.61597 0.461158Z' fill='%231E4391'/%3E%3Cpath d='M5.38403 15.5388L9.3165 10.8199C9.58789 10.4942 9.35631 9.99977 8.93239 9.99977H1.06744C0.643517 9.99977 0.411939 10.4942 0.683325 10.8199L4.6158 15.5388C4.8157 15.7787 5.18413 15.7787 5.38403 15.5388Z' fill='%231E4391'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
+  padding-top: 26px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .u-table table thead tr th.sticky {
   position: sticky;
@@ -63,46 +52,30 @@
 }
 .u-table table tbody tr:nth-child(2n+1) {
   background: rgba(202, 209, 225, 0.50);
+  color: #222222;
+
 }
 .u-table table tbody tr {
   background-color: #fff;
+  color: #222222;
 }
 .u-table table tbody tr td {
+  color: #222222;
   border-bottom: 1px solid #cad1e1;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .u-table table tbody tr td * {
+  color: #222222;
   width: 100%;
   white-space: break-spaces;
   word-break: break-all;
 }
-.u-table table tbody tr td.sticky {
-  position: sticky;
-  left: 0;
-  background-color: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-}
-.u-table table tbody tr td.sticky a {
-  color: #1e4391 !important;
-}
-.u-table table tbody tr td.sticky:after {
-  content: "";
-  position: absolute;
-  right: -4px;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(
-    269.98deg,
-    rgba(211, 211, 211, 0.8) -24.97%,
-    rgba(211, 211, 211, 0) 112.48%
-  );
-  transform: scaleX(-1);
-}
 .u-table table tbody tr:last-child td {
   border: none;
+  color: #222222;
 }
 /* .u-table table tbody tr:hover {
   background-color: #e9ecf1;
