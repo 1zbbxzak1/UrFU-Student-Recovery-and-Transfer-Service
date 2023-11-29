@@ -1,6 +1,6 @@
 "use client";
 
-const EmailSection = () => {
+const FAQSection = () => {
   return (
     <section
       id="contact"
@@ -83,4 +83,4 @@ const EmailSection = () => {
   );
 };
 
-export default EmailSection;
+export default FAQSection;
