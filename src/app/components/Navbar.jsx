@@ -27,7 +27,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="w-full h-[100px] mx-auto top-0 left-0 right-0 z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
+    <nav className="w-full mx-auto top-0 left-0 right-0 z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -47,7 +47,7 @@ const Navbar = () => {
           )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-16 ml-[120px] mt-5">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-16 ml-[120px] my-5">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.href} title={link.title} />
