@@ -197,8 +197,8 @@ button {
 .u-table table caption,
 .u-table table th,
 .u-table table td {
-  text-align: center;
-  vertical-align: middle;
+  text-align: left;
+  vertical-align: top;
 }
 
 .u-table table thead tr th {
@@ -230,7 +230,7 @@ button {
   left: 0;
   background-color: #fff;
   z-index: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .u-table table thead tr th.sticky:after {
