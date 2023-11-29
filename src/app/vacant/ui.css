@@ -119,6 +119,52 @@ button {
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
 }
+
+.u-preloader-mini {
+  text-align: center;
+}
+.u-preloader-mini-container {
+  overflow: visible;
+  position: relative;
+}
+.u-preloader-mini-dot {
+  transform-origin: center;
+  animation: rotate 3s linear infinite;
+  -webkit-animation: rotate 3s linear infinite;
+  -moz-animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes negative_rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes negative_rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes negative_rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .u-table {
   border-radius: 10px;
   background: #ffffff;
