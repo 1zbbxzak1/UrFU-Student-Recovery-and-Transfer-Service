@@ -22,5 +22,5 @@ The following dependencies are required for this project:
 - Tailwind CSS: A highly customizable CSS framework.
 - React: A JavaScript library for building user interfaces.
 - React Icons: A collection of popular icons for React projects.
-- UIkIt UrFU: Developing web interfaces for UrFU project.
+- UIkit UrFU: Developing web interfaces for UrFU project.
 - Axios: A JavaScript library that allows you to make HTTP requests from the browser or from Node.js
