@@ -1,4 +1,4 @@
-import './ui.css'
+import './contacts.css'
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({

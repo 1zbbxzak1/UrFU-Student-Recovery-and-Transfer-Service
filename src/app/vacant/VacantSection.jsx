@@ -74,8 +74,8 @@ const VacantSection = () => {
           </div>
         </div>
       ) : (
-        <div className="u-table">
-          <table className="table">
+        <div className="u-table-vacant">
+          <table className="table-vacant">
             <thead>
               <tr>
                 <th rowSpan="2">Код</th>
