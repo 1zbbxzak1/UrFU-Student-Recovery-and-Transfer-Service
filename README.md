@@ -23,4 +23,4 @@ The following dependencies are required for this project:
 - React: A JavaScript library for building user interfaces.
 - React Icons: A collection of popular icons for React projects.
 - UIkIt UrFU: Developing web interfaces for UrFU project.
-- Axios: 
+- Axios: A JavaScript library that allows you to make HTTP requests from the browser or from Node.js
