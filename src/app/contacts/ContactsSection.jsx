@@ -4,7 +4,7 @@ import React from "react";
 const ContactsSection = () => {
   return (
     <main className="mt-10 mb-10">
-      <h2 className="mb-10 text-left text-zinc-700">
+      <h2 className="mb-10 text-4xl font-semibold leading-[50.4px] text-left text-zinc-700">
         Ответственные от институтов УрФУ за
         <br />
         перевод и восстановление студентов

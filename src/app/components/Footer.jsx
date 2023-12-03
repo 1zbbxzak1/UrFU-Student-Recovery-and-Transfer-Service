@@ -41,9 +41,11 @@ const Footer = () => {
           </div>
         </Link>
       </div>
-      <p className="text-white text-sm ml-[125px] my-5">
-        {currentYear}
-      </p>
+      <div className="flex container flex-wrap items-center justify-between mx-auto">
+        <p className="text-white text-sm ml-[125px] my-5">
+          {currentYear}
+        </p>
+      </div>
     </nav>
   );
 };

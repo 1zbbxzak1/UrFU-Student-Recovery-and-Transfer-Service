@@ -10,10 +10,10 @@ const ProjectCard = ({ title, gitUrl }) => {
   return (
     <div>
     <div className="h-2.5 bg-[#2951b6]" />
-      <div className="u-card">
+      <div className="u-card-main">
         {title}
         <Link href={gitUrl}>
-          <button className="u-card-action"></button>
+          <button className="u-card-action-main"></button>
         </Link>
       </div>
     </div>
