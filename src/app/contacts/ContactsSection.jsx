@@ -9,8 +9,8 @@ const ContactsSection = () => {
         <br />
         перевод и восстановление студентов
       </h2>
-      <div class="u-table-contacts">
-        <table class="table">
+      <div className="u-table-contacts">
+        <table className="table">
           <thead>
             <tr>
               <th>

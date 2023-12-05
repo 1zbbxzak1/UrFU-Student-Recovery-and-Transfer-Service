@@ -11,7 +11,7 @@ const projectsData = [
     title: "Восстановление на бюджетную форму обучения",
     description: "Recovery 1 description",
     tag: ["Восстановление"],
-    gitUrl: "/",
+    gitUrl: "/recovery-first",
     previewUrl: "/",
   },
   {
@@ -19,7 +19,7 @@ const projectsData = [
     title: "Восстановление на контрактую форму обучения",
     description: "Recovery 2 description",
     tag: ["Восстановление"],
-    gitUrl: "https://www.wikipedia.org",
+    gitUrl: "/",
     previewUrl: "/",
   },
   {
