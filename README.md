@@ -6,7 +6,7 @@ This is a website designed to help students and dean's office staff in resolving
 1. clone the backend repository: `https://github.com/AnTaif/UrfuStudentTransfer-backend.git`
 2. clone the frontend repository: `https://github.com/1zbbxzak1/UrFU-Student-Recovery-and-Transfer-Service.git`
 3. Navigate to the project directory: `cd UrFU-Student-Recovery-and-Transfer-Service` or `cd /d [path]`
-4. Install the dependencies: `npm install`
+4. Install the dependencies: `npm install` and `npm i urfu-ui-kit-vanilla`
 
 ## Usage
 
