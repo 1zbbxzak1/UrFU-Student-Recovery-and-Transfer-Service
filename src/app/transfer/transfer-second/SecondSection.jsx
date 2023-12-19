@@ -187,7 +187,7 @@ const SecondSection = () => {
                     </span>
                     <u>
                       <a
-                        href="https://urfu.ru/fileadmin/user_upload/urfu.ru/documents/forms/Forma_No7_Zajavlenie_na_vosstanovlenie.pdf"
+                        href="https://trello.com/1/cards/65732d3e21ba13d9d9db2056/attachments/65732de0bf9d39495fe290b5/download/Перевод.pdf"
                         target="_blank"
                         className="text-blue-900 text-base font-semibold"
                       >
@@ -205,7 +205,7 @@ const SecondSection = () => {
                     </span>
                     <u>
                       <a
-                        href="https://vk.com/doc219067416_672095794?hash=TDeayt64jWefgTdNFY3IjZM4jt7xdMLXYEZbsR1F3Mg&dl=bxOz0BIqDW28ZY8jlfCmLomLW4ytgx902z8t4HD7MZD"
+                        href="https://vk.com/doc219067416_672095778?hash=M5fPD4UNhf6DcJVouZyHRp4ezYZBPSn44SZCZpCkSHo&dl=0TiZoKLOzQtvzpZLZptmQUfcndH8zBpPvkLjzakEMY8"
                         target="_blank"
                         className="text-blue-900 text-base font-semibold"
                       >
