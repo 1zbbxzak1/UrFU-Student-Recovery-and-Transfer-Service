@@ -139,7 +139,7 @@ const FirstSection = () => {
               </div>
               <div className="w-44 h-px border border-neutral-800 mx-auto mb-[15px]"></div>
               <p className="text-center text-neutral-800 text-[14px] leading-[17.07px] font-normal">
-                В большинстве случаев восстановления
+                В большинстве случаев перевод
                 <br />
                 занимает до 1 календарного месяца.
               </p>
