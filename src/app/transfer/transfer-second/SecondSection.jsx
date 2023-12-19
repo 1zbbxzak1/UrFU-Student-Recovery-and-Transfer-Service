@@ -225,7 +225,7 @@ const SecondSection = () => {
 
         <div>
           <div
-            className="w-[254px] h-[40px] bg-cover bg-center flex items-center justify-center mx-[60px] mb-[40px]"
+            className="w-[254px] h-[40px] bg-cover bg-center flex items-center justify-center mx-[60px] mb-[58px]"
             style={{
               backgroundImage: "url('/frame2.png')",
             }}
