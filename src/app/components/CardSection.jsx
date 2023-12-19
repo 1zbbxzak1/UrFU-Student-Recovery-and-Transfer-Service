@@ -35,7 +35,7 @@ const projectsData = [
     title: "Перевод на другое направление внутри института с бюджета на бюджет",
     description: "Transfer 1 description",
     tag: ["Перевод"],
-    gitUrl: "/",
+    gitUrl: "/transfer/transfer-second",
     previewUrl: "/",
   },
   {
