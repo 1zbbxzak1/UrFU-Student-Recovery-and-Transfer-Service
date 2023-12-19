@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const ProjectCard = ({ title, gitUrl }) => {
   const handleButtonClick = () => {
-    // You can add any additional logic before navigating
     console.log("Button Clicked!");
   };
 

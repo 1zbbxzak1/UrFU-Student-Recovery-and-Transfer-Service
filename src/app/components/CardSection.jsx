@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 import TagButton from "./TagButton";
 import { motion, useInView } from "framer-motion";
 
-const projectsData = [
+const cardData = [
   {
     id: 1,
     title: "Восстановление на бюджетную форму обучения",
@@ -33,7 +33,7 @@ const projectsData = [
   {
     id: 4,
     title: "Перевод на другое направление внутри института с бюджета на бюджет",
-    description: "Transfer 1 description",
+    description: "Transfer 2 description",
     tag: ["Перевод"],
     gitUrl: "/transfer/transfer-second",
     previewUrl: "/",
@@ -42,16 +42,16 @@ const projectsData = [
     id: 5,
     title:
       "Перевод на другое направление внутри института с бюджета на контракт",
-    description: "Transfer 1 description",
+    description: "Transfer 3 description",
     tag: ["Перевод"],
-    gitUrl: "/",
+    gitUrl: "/transfer/transfer-third",
     previewUrl: "/",
   },
   {
     id: 6,
     title:
       "Перевод на другое направление в другой институт с бюджета на бюджет",
-    description: "Transfer 1 description",
+    description: "Transfer 4 description",
     tag: ["Перевод"],
     gitUrl: "/",
     previewUrl: "/",
@@ -60,7 +60,7 @@ const projectsData = [
     id: 7,
     title:
       "Перевод на другое направление в другой институт с бюджета на контракт",
-    description: "Transfer 1 description",
+    description: "Transfer 5 description",
     tag: ["Перевод"],
     gitUrl: "/",
     previewUrl: "/",
@@ -68,14 +68,6 @@ const projectsData = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("recovery");
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
 
   const [tag, setTag] = useState("Восстановление");
   const ref = useRef(null);
@@ -85,7 +77,7 @@ const AboutSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) =>
+  const filteredProjects = cardData.filter((project) =>
     project.tag.includes(tag)
   );
 
