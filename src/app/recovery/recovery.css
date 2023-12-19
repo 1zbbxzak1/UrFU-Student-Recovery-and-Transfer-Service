@@ -1,0 +1,28 @@
+.box {
+  width: 320px;
+  height: 1px;
+}
+.box .arrow {
+  position: relative;
+  width: 322px;
+  height: 37px;
+}
+
+.underline {
+  width: auto;
+  height: 0.5px;
+  background-color: #D3D3D3;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.u-card-rec-tran {
+  background-color: #fff;
+  width: 802px;
+  height: 229px;
+  border: 1px solid #D3D3D3;
+  margin-left: 73px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='30' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.5 13-.638-2.825a1 1 0 0 0-1.51-.625l-2.448 1.546L3.45 8.647a1 1 0 0 0-.625-1.509L0 6.5l2.825-.638a1 1 0 0 0 .625-1.51L1.904 1.905 4.353 3.45a1 1 0 0 0 1.509-.625L6.5 0l.638 2.825a1 1 0 0 0 1.51.625l2.448-1.546L9.55 4.353a1 1 0 0 0 .625 1.509L13 6.5l-2.825.638a1 1 0 0 0-.625 1.51l1.546 2.448L8.647 9.55a1 1 0 0 0-1.509.625L6.5 13ZM21.5 32l-.708-1.395a27.59 27.59 0 0 0-.462-.89 13 13 0 0 0-5.045-5.045 27.59 27.59 0 0 0-.89-.462L13 23.5l1.395-.708c.45-.228.675-.342.89-.462a13 13 0 0 0 5.045-5.045c.12-.215.234-.44.462-.89L21.5 15l.708 1.395c.228.45.342.675.462.89a13 13 0 0 0 5.045 5.045c.215.12.44.234.89.462L30 23.5l-1.395.708c-.45.228-.675.342-.89.462a13 13 0 0 0-5.045 5.045c-.12.215-.234.44-.462.89L21.5 32Z' fill='%231E4391'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom 25px left 717px;
+}
