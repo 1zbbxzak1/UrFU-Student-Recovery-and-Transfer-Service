@@ -23,7 +23,7 @@ const FirstSection = () => {
         </div>
         <div className="flex flex-row items-center justify-center mx-[80px] mt-[45px]">
           <div className="w-80 h-24 bg-white border border-neutral-300">
-            <div className="w-[268px] mx-5 my-5 text-neutral-800 text-sm font-normal text-center">
+            <div className="w-[268px] mx-5 my-5 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
               Студент может восстановиться в УрФУ, если он был отчислен не более
               5 лет назад.
             </div>
@@ -32,7 +32,7 @@ const FirstSection = () => {
             <i className="u-icon icon-plus text-[31px]"></i>
           </div>
           <div className="w-80 h-24 bg-white border border-neutral-300">
-            <div className="w-[268px] h-9 mx-5 my-7 text-neutral-800 text-sm font-normal text-center">
+            <div className="w-[268px] h-9 mx-5 my-7 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
               Академическая разница не должна превышать 15 зачетных единиц.
             </div>
           </div>
@@ -40,7 +40,7 @@ const FirstSection = () => {
             <i className="u-icon icon-plus text-[31px]"></i>
           </div>
           <div className="w-80 h-24 bg-white border border-neutral-300">
-            <div className="w-[268px] mx-5 my-5 text-neutral-800 text-sm font-normal text-center">
+            <div className="w-[268px] mx-5 my-5 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
               Восстановление осуществляется только при наличии вакантных
               бюджетных мест.
             </div>
@@ -84,11 +84,11 @@ const FirstSection = () => {
             <div className="w-[290px] h-[226px] ml-[55px] mr-[124px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-documents text-[24px] mr-1"></i>
-                <p className="text-black text-sm font-normal text-center mt-[15px] mb-[19px]">
+                <p className="text-black text-[14px] leading-[17.07px] font-normal text-center mt-[15px] mb-[19px]">
                   Документы:
                 </p>
               </div>
-              <ul className="w-[250px] text-neutral-800 text-sm font-normal mx-10 list-outside list-disc">
+              <ul className="w-[250px] text-neutral-800 text-[14px] leading-[17.07px] font-normal mx-10 list-outside list-disc">
                 <li>Паспорт</li>
                 <li>Зачетная книжка</li>
                 <li>
@@ -99,7 +99,7 @@ const FirstSection = () => {
                 <li>Заявление на восстановление</li>
               </ul>
               <div className="w-36 h-px border border-[#000000] mx-auto my-[15px]"></div>
-              <p className="text-neutral-800 text-sm font-normal text-center">
+              <p className="text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
                 Принести в деканат института
               </p>
             </div>
@@ -107,7 +107,7 @@ const FirstSection = () => {
             <div className="w-[474px] h-[74px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-question text-[24px] mr-[10px]"></i>
-                <p className="w-[277px] text-black text-sm font-normal text-left my-4">
+                <p className="w-[277px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
                   Для решения вопросов, связанных с постановкой на воинский
                   учет:
                 </p>
@@ -118,12 +118,12 @@ const FirstSection = () => {
               </div>
               <div className="flex">
                 <div className="w-56 h-24 bg-white border border-neutral-300">
-                  <p className="w-[187px] text-black text-sm font-normal text-center mx-auto my-5">
+                  <p className="w-[187px] text-black text-[14px] leading-[17.07px] font-normal text-center mx-auto my-5">
                     Гражданин РФ обязан посетить второй отдел УрФУ.
                   </p>
                 </div>
                 <div className="ml-6 w-56 h-24 bg-white border border-neutral-300">
-                  <p className="w-[207px] text-black text-sm font-normal text-center mx-auto my-5">
+                  <p className="w-[207px] text-black text-[14px] leading-[17.07px] font-normal text-center mx-auto my-5">
                     Иностранные граждане обязаны посетить международный отдел.
                   </p>
                 </div>
@@ -133,7 +133,7 @@ const FirstSection = () => {
             <div className="ml-[130px] w-[271px] h-[74px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-document text-[24px] mr-[10px]"></i>
-                <p className="w-[201px] text-black text-sm font-normal text-left my-4">
+                <p className="w-[201px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
                   Заявления отправляются к проректору для подписи.
                 </p>
               </div>
