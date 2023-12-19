@@ -130,7 +130,7 @@ const FirstSection = () => {
 
         <div className="container items-center justify-center mx-[20px] mt-[45px]">
           <div className="flex flex-row mt-[30px] mb-[45px]">
-            <div className="w-[372px] h-[241px] ml-[55px] mr-[30px] bg-white border border-neutral-300">
+            <div className="w-[372px] h-[241px] ml-[55px] mr-[84px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-clock text-[32px] mt-[1px] mr-[10px]"></i>
                 <p className="w-[268px] text-[#1E4391] text-[18px] leading-[21.94px] font-medium text-left mt-[20px] mb-[15px]">
@@ -145,7 +145,7 @@ const FirstSection = () => {
               </p>
             </div>
 
-            <div className="w-[372px] h-[241px] mr-[30px] bg-white border border-neutral-300">
+            <div className="w-[372px] h-[241px] mr-[84px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-calendar text-[32px] mt-[1px] mr-[10px]"></i>
                 <p className="w-[268px] text-[#1E4391] text-[18px] leading-[21.94px] font-medium text-left mt-[20px] mb-[15px]">
