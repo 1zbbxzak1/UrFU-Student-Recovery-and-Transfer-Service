@@ -33,7 +33,7 @@ const SecondSection = () => {
             <i className="u-icon icon-plus text-[31px]"></i>
           </div>
           <div className="w-80 h-24 bg-white border border-neutral-300">
-            <div className="w-[268px] h-9 mx-5 my-7 text-neutral-800 text-[14px] leading-[17.07px] font-normal">
+            <div className="w-[268px] h-9 mx-5 my-7 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
               Академическая разница не должна превышать 15 зачетных единиц.
             </div>
           </div>
