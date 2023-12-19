@@ -80,7 +80,7 @@ const FirstSection = () => {
             <div className="w-[290px] h-[204px] ml-[73px] mr-[124px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-documents text-[24px] mr-1"></i>
-                <p className="text-black text-sm font-normal text-center mt-[15px] mb-[19px]">
+                <p className="text-black text-[14px] leading-[17.07px] font-normal text-center mt-[15px] mb-[19px]">
                   Документы:
                 </p>
               </div>
@@ -90,7 +90,7 @@ const FirstSection = () => {
                 <li>Заявление на перевод</li>
               </ul>
               <div className="w-36 h-px border border-[#000000] mx-auto my-[15px]"></div>
-              <p className="text-neutral-800 text-sm font-normal text-center">
+              <p className="text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
                 принести в деканат института
               </p>
             </div>
@@ -98,7 +98,7 @@ const FirstSection = () => {
             <div className="w-[290px] h-[204px] ml-[73px] mr-[124px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-cup text-[24px] mr-[3px]"></i>
-                <p className="text-black text-sm font-normal text-center mt-[15px] mb-[19px]">
+                <p className="text-black text-[14px] leading-[17.07px] font-normal text-center mt-[15px] mb-[19px]">
                   По желанию студента
                 </p>
               </div>
@@ -107,7 +107,7 @@ const FirstSection = () => {
                 <li>Документы, подтверждающие достижения студента</li>
               </ul>
               <div className="w-36 h-px border border-[#000000] mx-auto my-[15px]"></div>
-              <p className="text-neutral-800 text-sm font-normal text-center">
+              <p className="text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
                 принести в деканат института
               </p>
             </div>
