@@ -81,19 +81,19 @@ const SecondSection = () => {
                 </p>
               </div>
               <ul className="w-[250px] text-neutral-800 text-sm font-normal mx-10 list-outside list-disc">
-                <li>паспорт</li>
-                <li>зачетная книжка</li>
+                <li>Паспорт</li>
+                <li>Зачетная книжка</li>
                 <li>
-                  приписное свидетельство
+                  Приписное свидетельство
                   <br />
                   (для лиц мужского пола)
                 </li>
                 <li>Паспорт плательщика</li>
-                <li>заявление на восстановление</li>
+                <li>Заявление на восстановление</li>
               </ul>
               <div className="w-36 h-px border border-[#000000] mx-auto my-[15px]"></div>
               <p className="text-neutral-800 text-sm font-normal text-center">
-                принести в деканат института
+                Принести в деканат института
               </p>
             </div>
 
