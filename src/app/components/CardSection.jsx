@@ -53,7 +53,7 @@ const cardData = [
       "Перевод на другое направление в другой институт с бюджета на бюджет",
     description: "Transfer 4 description",
     tag: ["Перевод"],
-    gitUrl: "/",
+    gitUrl: "/transfer/transfer-fourth",
     previewUrl: "/",
   },
   {
