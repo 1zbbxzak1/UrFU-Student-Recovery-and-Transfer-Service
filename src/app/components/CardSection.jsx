@@ -27,7 +27,7 @@ const projectsData = [
     title: "Перевод на бюджетную форму обучения с контрактной",
     description: "Transfer 1 description",
     tag: ["Перевод"],
-    gitUrl: "/",
+    gitUrl: "/transfer/transfer-first",
     previewUrl: "/",
   },
   {
