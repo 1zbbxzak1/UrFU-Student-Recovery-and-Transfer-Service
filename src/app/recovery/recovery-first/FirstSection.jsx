@@ -244,7 +244,8 @@ const FirstSection = () => {
                     </span>
                     <u>
                       <a
-                        href="https://trello.com/1/cards/65732d3e21ba13d9d9db2056/attachments/65732d8c6545ff751bcd88a5/download/Восстановление.pdf"
+                        href="https://urfu.ru/fileadmin/user_upload/urfu.ru/documents/forms/Forma_No7_Zajavlenie_na_vosstanovlenie.pdf"
+                        target='_blank'
                         className="text-blue-900 text-base font-semibold"
                       >
                         заявление
