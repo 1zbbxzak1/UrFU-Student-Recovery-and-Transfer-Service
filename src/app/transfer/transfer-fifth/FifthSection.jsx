@@ -2,12 +2,12 @@
 import React from "react";
 import "../transfer.css";
 
-const FourthSection = () => {
+const FifthSection = () => {
   return (
     <main className="mt-10 mb-10 mx-auto">
       <h2 className="mx-[80px] mb-[80px] text-[36px] leading-[50.4px] text-left text-zinc-700">
         Перевод на другое направление в другой институт
-        <br />с бюджетной формы обучения на бюджетную
+        <br />с бюджетной формы обучения на контрактную
       </h2>
 
       <section>
@@ -21,38 +21,19 @@ const FourthSection = () => {
             Необходимые условия для подачи заявления:
           </p>
         </div>
-        <div className="flex flex-row items-center justify-center mx-[80px] mt-[45px]">
-          <div className="w-[245px] h-[144px] bg-white border border-neutral-300">
-            <div className="w-[212px] mx-4 my-[46px] text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
-              Перевод осуществляется только при наличии вакантных бюджетных
-              мест.
-            </div>
-          </div>
-          <div className="my-[30px] mx-[35px]">
-            <i className="u-icon icon-plus text-[31px]"></i>
-          </div>
-          <div className="w-[245px] h-[144px] bg-white border border-neutral-300">
-            <div className="w-[223px] h-9 mx-[11px] my-9 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
+        <div className="flex flex-row items-center justify-start mx-[80px] mt-[45px]">
+          <div className="w-[308px] h-[91px] bg-white border border-neutral-300">
+            <div className="w-[283px] mx-3 my-5 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
               При наличии академической задолженности определяется срок для ее
               сдачи, но не более одного года.
             </div>
           </div>
-          <div className="my-[30px] mx-[35px]">
+          <div className="my-[30px] mx-[74px]">
             <i className="u-icon icon-plus text-[31px]"></i>
           </div>
-          <div className="w-[245px] h-[144px] bg-white border border-neutral-300">
-            <div className="w-[205px] mx-5 my-11 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
+          <div className="w-[308px] h-[91px] bg-white border border-neutral-300">
+            <div className="w-[268px] h-9 mx-5 my-7 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
               Академическая разница не должна превышать 15 зачетных единиц.
-            </div>
-          </div>
-          <div className="my-[30px] mx-[35px]">
-            <i className="u-icon icon-plus text-[31px]"></i>
-          </div>
-          <div className="w-[245px] h-[144px] bg-white border border-neutral-300">
-            <div className="w-[207px] mx-5 my-5 text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
-              Если количество вакантных мест меньше количества поданных
-              заявлений, осуществляется отбор лиц, наиболее подготовленных к
-              освоению программы.
             </div>
           </div>
         </div>
@@ -73,24 +54,24 @@ const FourthSection = () => {
 
         <div className="container items-center justify-center mx-[20px] mt-[45px]">
           <div className="flex flex-row justify-center mt-[45px]">
-            <div className="mr-[70px] text-slate-300 text-opacity-50 text-8xl font-normal">
+            <div className="mr-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
               1
             </div>
-            <div className="box mt-[29px]">
+            <div className="box w-[250px] mt-[29px]">
               <img className="arrow" src="/arrow.png" />
             </div>
-            <div className="mx-[70px] text-slate-300 text-opacity-50 text-8xl font-normal">
+            <div className="mx-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
               2
             </div>
-            <div className="box mt-[29px]">
+            <div className="box w-[250px] mt-[29px]">
               <img className="arrow" src="/arrow.png" />
             </div>
-            <div className="ml-[70px] text-slate-300 text-opacity-50 text-8xl font-normal">
+            <div className="ml-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
               3
             </div>
           </div>
 
-          <div className="flex flex-row mx-[55px] mt-[30px] mb-[45px]">
+          <div className="flex flex-row mx-[100px] mt-[30px] mb-[45px]">
             <div className="w-[320px] h-[91px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-document text-[24px] mr-[10px]"></i>
@@ -101,7 +82,7 @@ const FourthSection = () => {
               </div>
             </div>
 
-            <div className="ml-[160px] w-[320px] h-[91px] bg-white border border-neutral-300">
+            <div className="ml-[120px] w-[320px] h-[91px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-document text-[24px] mr-[10px]"></i>
                 <p className="w-[263px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
@@ -111,7 +92,7 @@ const FourthSection = () => {
               </div>
             </div>
 
-            <div className="w-[320px] h-[221px] ml-[190px] bg-white border border-neutral-300">
+            <div className="w-[285px] h-[221px] ml-[170px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-documents text-[24px] mr-1"></i>
                 <p className="text-black text-[14px] leading-[17.07px] font-normal text-center mt-[15px] mb-[19px]">
@@ -128,55 +109,101 @@ const FourthSection = () => {
                 <li>Заявление на перевод</li>
               </ul>
               <div className="w-36 h-px border border-[#000000] mx-auto my-[15px]"></div>
-              <p className="w-[236px] mx-[42px] text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
+              <p className="w-[236px] mx-[24px] text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
                 Принести в деканат института, в который переводится студент
               </p>
             </div>
           </div>
 
           <div className="flex flex-row justify-center mt-[45px]">
-            <div className="ml-[70px] mr-[70px] text-slate-300 text-opacity-50 text-8xl font-normal">
+            <div className=" ml-[-20px] mr-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
               4
             </div>
-            <div className="box mt-[29px]">
+            <div className="box w-[250px] mt-[29px]">
               <img className="arrow" src="/arrow.png" />
             </div>
-            <div className="mx-[70px] text-slate-300 text-opacity-50 text-8xl font-normal">
+            <div className="mx-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
               5
+            </div>
+            <div className="box w-[250px] mt-[29px]">
+              <img className="arrow" src="/arrow.png" />
+            </div>
+            <div className="ml-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
+              6
             </div>
           </div>
 
-          <div className="flex flex-row mt-[30px] mb-[220px]">
-            <div className="w-[474px] h-[74px] ml-[210px] bg-white border border-neutral-300">
+          <div className="flex flex-row mx-[100px] mt-[30px] mb-[50px]">
+            <div className="w-[340px] h-[74px] ml-[-30px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-question text-[24px] mr-[10px]"></i>
-                <p className="w-[277px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
+                <p className="w-[266px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
                   Для решения вопросов, связанных с постановкой на воинский
                   учет:
                 </p>
               </div>
-              <div className="flex mx-28">
+              <div className="flex mx-20">
                 <div className="w-0.5 mt-[6px] h-16 bg-zinc-200" />
-                <div className="ml-[244px] mt-[6px] w-0.5 h-16 bg-zinc-200" />
+                <div className="ml-[176px] mt-[6px] w-0.5 h-16 bg-zinc-200" />
               </div>
               <div className="flex">
-                <div className="w-56 h-24 bg-white border border-neutral-300">
+                <div className="w-[227px] h-[91px] ml-[-50px] mr-[50px] bg-white border border-neutral-300">
                   <p className="w-[187px] text-black text-[14px] leading-[17.07px] font-normal text-center mx-auto my-5">
                     Гражданин РФ обязан посетить второй отдел УрФУ.
                   </p>
                 </div>
-                <div className="ml-6 w-56 h-24 bg-white border border-neutral-300">
+                <div className="w-[227px] h-[91px] bg-white border border-neutral-300">
                   <p className="w-[207px] text-black text-[14px] leading-[17.07px] font-normal text-center mx-auto my-5">
                     Иностранные граждане обязаны посетить международный отдел.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="ml-[130px] w-[320px] h-[74px] bg-white border border-neutral-300">
+
+            <div className="ml-[155px] w-[271px] h-[74px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
                 <i className="u-icon icon-document text-[24px] mt-[2px] mr-[10px]"></i>
                 <p className="w-[202px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
                   Заявления отправляются к проректору для подписи.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-[285px] h-[245px] ml-[195px] bg-white border border-neutral-300">
+              <div className="flex flex-row items-center justify-center">
+                <i class="u-icon icon-calculator text-[24px] mr-[5px] mb-[4px]"></i>
+                <p className="text-black text-[14px] leading-[17.07px] font-normal text-center mt-[15px] mb-[19px]">
+                  Оплата
+                </p>
+              </div>
+              <p className="w-[245px] text-neutral-800 text-[14px] leading-[17.07px] font-normal mx-5 text-center">
+                После расчёта стоимости студент посещает договорной отдел для
+                подписи и оплачивает договор в кассе УрФУ в т.ч. за
+                наличный/безналичный расчет.
+              </p>
+              <div className="w-36 h-px border border-[#000000] mx-auto my-[15px]"></div>
+              <p className="text-neutral-800 text-[14px] leading-[17.07px] font-normal text-center">
+                Адрес:
+                <br />
+                ул. Мира, д.19, левое крыло
+                <br />
+                главного учебного корпуса
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-row justify-start mx-[220px]">
+            <div className=" ml-[-10px] mr-[47px] text-slate-300 text-opacity-50 text-8xl font-normal">
+              7
+            </div>
+          </div>
+
+          <div className="flex flex-row mx-[100px] mt-[30px] mb-[60px]">
+            <div className="w-[271px] h-[74px] bg-white border border-neutral-300">
+              <div className="flex flex-row items-center justify-center">
+                <i className="u-icon icon-news text-[24px] mr-[10px]"></i>
+                <p className="w-[201px] text-black text-[14px] leading-[17.07px] font-normal text-left my-4">
+                  После оплаты выходит приказ о переводе.
                 </p>
               </div>
             </div>
@@ -278,7 +305,7 @@ const FourthSection = () => {
             <p className="text-center text-neutral-800 text-[14px] leading-[17.07px] font-normal">
               В большинстве случаев перевод
               <br />
-              занимает от одной до двух недель.
+              занимает до 1 календарного месяца.
             </p>
           </div>
         </div>
@@ -287,4 +314,4 @@ const FourthSection = () => {
   );
 };
 
-export default FourthSection;
+export default FifthSection;
