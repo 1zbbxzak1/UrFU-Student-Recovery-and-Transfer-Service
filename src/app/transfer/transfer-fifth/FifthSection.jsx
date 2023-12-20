@@ -218,8 +218,8 @@ const FifthSection = () => {
           <div className="container items-start justify-start">
             <div className="mt-[30px] mb-[45px]">
               <div className="flex items-start justify-start">
-                <div className="flex flex-col items-start justify-start">
-                  <p className="text-[#222222] text-[24px] leading-[29.26px] font-semibold mb-[10px] ml-[30px] mr-[42px]">
+                <div className="card-transfer flex flex-col items-start justify-start">
+                  <p className="text-[#222222] text-[24px] leading-[29.26px] font-semibold mb-[10px] ml-[30px] mr-[45px]">
                     Ты захотел перевестись?
                   </p>
                   <div className="w-36 h-px border border-[#000000] ml-[30px] mb-[10px]"></div>
@@ -237,7 +237,7 @@ const FifthSection = () => {
                   </button>
                 </div>
 
-                <div className="flex flex-col items-start justify-start">
+                <div className="flex flex-col items-start justify-start ml-5">
                   <p className="text-[#222222] text-[20px] leading-[24.38px] font-medium text-center mt-[3px] mb-[20px]">
                     Тебе может пригодиться:
                   </p>

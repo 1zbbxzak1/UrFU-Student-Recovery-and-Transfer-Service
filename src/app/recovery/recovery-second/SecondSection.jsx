@@ -186,8 +186,8 @@ const SecondSection = () => {
           <div className="container items-start justify-start">
             <div className="mt-[30px] mb-[45px]">
               <div className="flex items-start justify-start">
-                <div className="flex flex-col items-start justify-start">
-                  <p className="text-[#222222] text-[24px] leading-[29.26px] font-semibold mb-[10px] ml-[30px] mr-[42px]">
+                <div className="card-recovery flex flex-col items-start justify-start">
+                  <p className="text-[#222222] text-[24px] leading-[29.26px] font-semibold mb-[10px] ml-[30px] mr-[45px]">
                     Ты захотел восстановится?
                   </p>
                   <div className="w-36 h-px border border-[#000000] ml-[30px] mb-[10px]"></div>
@@ -197,15 +197,15 @@ const SecondSection = () => {
                     по кнопке ниже:
                   </p>
                   <button onClick={() => alert("Вы нажали кнопку")}>
-                    <div class="w-80 h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
-                      <div class="w-80 text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
+                    <div class="w-[345px] h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
+                      <div class="w-[345px] text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
                         Перейти к формированию заявки
                       </div>
                     </div>
                   </button>
                 </div>
 
-                <div className="flex flex-col items-start justify-start">
+                <div className="flex flex-col items-start justify-start ml-5">
                   <p className="text-[#222222] text-[20px] leading-[24.38px] font-medium text-center mt-[3px] mb-[20px]">
                     Тебе может пригодиться:
                   </p>
