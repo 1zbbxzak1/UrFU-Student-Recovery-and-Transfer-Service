@@ -1,6 +1,6 @@
 import './globals.css'
 import './ui.css'
-import "urfu-ui-kit-vanilla/src/main.css"
+import "urfu-ui-kit-vanilla/src/main.ts";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
