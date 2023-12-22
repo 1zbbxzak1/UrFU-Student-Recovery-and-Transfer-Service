@@ -6,10 +6,10 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-[#F6F6F6]">
+    <main className="flex flex-col min-h-screen mx-auto bg-[#F6F6F6]">
       <Navbar />
+      <HeroSection />
       <div className="flex-grow container mx-auto px-12">
-        <HeroSection />
         <CardSection />
         <FAQSection />
       </div>
