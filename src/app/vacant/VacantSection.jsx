@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { updateData, getData } from "../api/route";
+import { updateDataVacant, getDataVacant } from "../api/vacant";
 
 const VacantSection = () => {
   const [search, setSearch] = useState("");
@@ -8,11 +8,11 @@ const VacantSection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleUpdateData = () => {
-    updateData(setIsLoading);
+    updateDataVacant(setIsLoading);
   };
 
   useEffect(() => {
-    getData(setTableData, setIsLoading);
+    getDataVacant(setTableData, setIsLoading);
   }, []);
 
   return (

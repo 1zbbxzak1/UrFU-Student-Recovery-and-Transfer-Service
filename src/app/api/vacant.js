@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const updateData = async (setIsLoading) => {
+export const updateDataVacant = async (setIsLoading) => {
   try {
     setIsLoading(true);
     const response = await axios.post(
@@ -14,7 +14,7 @@ export const updateData = async (setIsLoading) => {
   }
 };
 
-export const getData = async (setTableData, setIsLoading) => {
+export const getDataVacant = async (setTableData, setIsLoading) => {
   try {
     setIsLoading(true);
     const getResult = await axios.get("http://localhost:5270/api/vacant");
