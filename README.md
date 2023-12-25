@@ -5,11 +5,11 @@ This is a website designed to help students and dean's office staff in resolving
 
 1. clone the backend repository:
    ```bash
-   git clone https://github.com/AnTaif/UrfuStudentTransfer-backend.git
+   git clone https://github.com/AnTaif/UrfuStudentTransfer-backend
    ```
 3. clone the frontend repository:
    ```bash
-   git clone https://github.com/1zbbxzak1/UrFU-Student-Recovery-and-Transfer-Service.git
+   git clone https://github.com/1zbbxzak1/UrFU-Student-Recovery-and-Transfer-Service
    ```
 5. Navigate to the project directory:
    ```bash
