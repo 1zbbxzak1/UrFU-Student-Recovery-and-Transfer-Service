@@ -210,7 +210,7 @@ const ThirdSection = () => {
                     </span>
                     <u>
                       <a
-                        href="https://trello.com/1/cards/65732d3e21ba13d9d9db2056/attachments/65732de0bf9d39495fe290b5/download/Перевод.pdf"
+                        href="https://drive.google.com/file/d/1COl4hEUhPwiNJGue95ixVMAdT8GcR61l/view?usp=sharing"
                         target="_blank"
                         className="text-blue-900 text-base font-semibold"
                       >
