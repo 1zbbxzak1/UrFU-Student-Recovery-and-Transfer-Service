@@ -13,7 +13,7 @@ This is a website designed to help students and dean's office staff in resolving
    ```
 5. Navigate to the project directory:
    ```bash
-   cd UrFU-Student-Recovery-and-Transfer-Service` or `cd /d [path]
+   cd UrFU-Student-Recovery-and-Transfer-Service or cd /d [path]
    ```
 7. Install the dependencies: `npm install` and `npm i urfu-ui-kit-vanilla`
 
