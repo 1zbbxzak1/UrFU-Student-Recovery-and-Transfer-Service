@@ -392,7 +392,7 @@ const Navbar = () => {
                     setShowModalReg(false);
                     setShowModalLogin(true);
                   }}
-                  className="text-blue-900 text-base text-[12px] leading-[14.63px] font-normal underline"
+                  className="text-blue-900 text-[12px] leading-[14.63px] font-normal underline"
                 >
                   Войти
                 </button>
