@@ -102,3 +102,28 @@
   bottom: 20px;
   right: 20px;
 }
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'urfu-ui-icon-font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-r-arrow:before {
+  content: "\e93b";
+  color: white;
+}
+
+.i-hidden:before {
+  content: "\e921";
+  color: #9CA2A9;
+}
