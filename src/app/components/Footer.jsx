@@ -9,6 +9,10 @@ const footerLinks = [
     href: "/",
   },
   {
+    title: "ЗАЯВКИ",
+    href: "/",
+  },
+  {
     title: "ВАКАНТНЫЕ МЕСТА",
     href: "/vacant",
   },
@@ -37,7 +41,7 @@ const Footer = () => {
         >
           <div className="relative block pt-2 pl-3 pr-4 text-white sm:text-sm rounded md:p-0 group">
             <span className="group-hover:block absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-bottom scale-x-0 transition-transform group-hover:scale-x-100"></span>
-            {"ЛИЧНЫЙ КАБИНЕТ"}
+            {"ПРОФИЛЬ"}
           </div>
         </Link>
       </div>

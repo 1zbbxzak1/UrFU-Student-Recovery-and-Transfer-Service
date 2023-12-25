@@ -11,8 +11,6 @@ const TagButton = ({ name, onClick, isSelected, children }) => {
     ? "text-[#393E46]"
     : "text-[#393E46]";
 
-  const buttonClasses = isSelected ? "text-[#393E46]" : "text-[#393E46]";
-
   return (
     <button
       className={`${buttonStyles} px-2 lg:px-6 text-xl cursor-pointer`}

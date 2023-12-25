@@ -1,5 +1,5 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import TagButton from "./TagButton";
@@ -106,10 +106,10 @@ const AboutSection = () => {
               Перевод
             </TagButton>
           </div>
-          <div className="w-[315px] lg:w-[1280px] h-[1px] bg-neutral-400" />
+          <div className="w-full h-[1px] bg-neutral-400" />
         </div>
       </div>
-      <ul ref={ref} className="mx-[-15px] lg:mx-20 grid md:grid-cols-3 gap-4 md:gap-12">
+      <ul ref={ref} className="mx-[64px] grid md:grid-cols-3 gap-4 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}

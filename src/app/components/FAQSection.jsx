@@ -4,12 +4,12 @@ const FAQSection = () => {
   return (
     <section
       id="contact"
-      className="mx-[-15px] my-12 lg:my-20 lg:mx-20"
+      className="my-12 lg:my-20"
     >
-      <div className="mb-12">
+      <div className="items-center px-12 py-12 sm:py-16 xl:px-16 mb-12">
         <h2 className="text-2xl lg:text-4xl font-semibold text-zinc-700 mb-10">
           Часто задаваемые вопросы
-          <div className="w-full lg:w-[1280px] h-[1px] ml-0 mt-3 bg-neutral-400"/>
+          <div className="w-full h-[1px] ml-0 mt-3 bg-neutral-400"/>
         </h2>
                   
         <div className="u-accordion-main">

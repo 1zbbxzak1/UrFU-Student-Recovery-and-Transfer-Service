@@ -2,13 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 const ProjectCard = ({ title, gitUrl }) => {
-  const handleButtonClick = () => {
-    console.log("Button Clicked!");
-  };
-
   return (
     <div>
-    <div className="h-2.5 bg-[#2951b6]" />
+    <div className="h-2.5 max-w-[400px] bg-[#2951b6]" />
       <div className="u-card-main">
         {title}
         <Link href={gitUrl}>
