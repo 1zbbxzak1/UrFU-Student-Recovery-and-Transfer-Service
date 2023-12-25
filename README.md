@@ -3,10 +3,19 @@ This is a website designed to help students and dean's office staff in resolving
 
 ## Installation
 
-1. clone the backend repository: `https://github.com/AnTaif/UrfuStudentTransfer-backend.git`
-2. clone the frontend repository: `https://github.com/1zbbxzak1/UrFU-Student-Recovery-and-Transfer-Service.git`
-3. Navigate to the project directory: `cd UrFU-Student-Recovery-and-Transfer-Service` or `cd /d [path]`
-4. Install the dependencies: `npm install` and `npm i urfu-ui-kit-vanilla`
+1. clone the backend repository:
+   ```bash
+   https://github.com/AnTaif/UrfuStudentTransfer-backend.git
+   ```
+3. clone the frontend repository:
+   ```bash
+   https://github.com/1zbbxzak1/UrFU-Student-Recovery-and-Transfer-Service.git
+   ```
+5. Navigate to the project directory:
+   ```bash
+   cd UrFU-Student-Recovery-and-Transfer-Service` or `cd /d [path]
+   ```
+7. Install the dependencies: `npm install` and `npm i urfu-ui-kit-vanilla`
 
 ## Usage
 
