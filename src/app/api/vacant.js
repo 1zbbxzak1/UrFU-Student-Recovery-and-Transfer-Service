@@ -4,7 +4,7 @@ export const updateDataVacant = async (setIsLoading) => {
   try {
     setIsLoading(true);
     const response = await axios.post(
-      "http://localhost:5270/api/vacant/update"
+      "http://localhost:8080/api/vacant/update"
     );
     console.log("Вызван POST", response.data);
   } catch (error) {
@@ -17,7 +17,7 @@ export const updateDataVacant = async (setIsLoading) => {
 export const getDataVacant = async (setTableData, setIsLoading) => {
   try {
     setIsLoading(true);
-    const getResult = await axios.get("http://localhost:5270/api/vacant");
+    const getResult = await axios.get("http://localhost:8080/api/vacant");
     console.log("Вызван GET", getResult.data);
 
     setTableData([]);

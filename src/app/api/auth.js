@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5270/api";
+const BASE_URL = "http://localhost:8080/api";
 
 async function apiFetch(url, method, data = null) {
   const token = localStorage.getItem("token");

@@ -1,6 +1,6 @@
 export const seedData = async () => {
   try {
-    const response = await fetch("http://localhost:5270/api/seed", {
+    const response = await fetch("http://localhost:8080/api/seed", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
