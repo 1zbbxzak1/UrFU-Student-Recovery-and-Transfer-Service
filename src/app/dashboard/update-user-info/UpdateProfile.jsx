@@ -102,13 +102,11 @@ const UpdateProfile = () => {
                 </div>
               </button>
               <Link href="/dashboard">
-                <button>
-                  <div className="w-[200px] h-[48px] border border-[#D3D3D3] rounded-lg">
-                    <div className="justify-center items-center inline-flex py-4 text-[#222222] text-[14px] leading-[17.07px] font-medium">
-                      Отмена
-                    </div>
+                <div className="w-[200px] h-[48px] border border-[#D3D3D3] rounded-lg">
+                  <div className="flex justify-center items-center py-4 text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                    Отмена
                   </div>
-                </button>
+                </div>
               </Link>
             </div>
           </div>
