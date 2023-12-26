@@ -127,3 +127,8 @@
   content: "\e921";
   color: #9CA2A9;
 }
+
+.i-pencil:before {
+  content: "\e933";
+  color: #D3D3D3;
+}
