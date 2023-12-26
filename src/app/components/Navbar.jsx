@@ -122,93 +122,7 @@ const Navbar = () => {
   }, []);
 
   if (!isTokenChecked) {
-    return (
-      <nav className="w-full px-[80px] z-10 bg-gradient-to-l from-blue-900 via-sky-600 to-blue-500 bg-opacity-100">
-      <div className="flex container flex-wrap items-center justify-between pt-[10px] mx-auto">
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="inline-flex p-4 md:p-0 md:flex-row md:space-x-16 lg:space-x-12 mb-[12px]">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.href} title={link.title} />
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {authenticated ? (
-          <ul className="inline-flex p-4 md:p-0 md:flex-row md:space-x-16 lg:space-x-2 my-5">
-            <li>
-              <Link href="/dashboard">
-                <div className="relative block py-2 pl-3 pr-4 text-white sm:text-xl lg:text-[14px] lg:leading-[17.07px] rounded md:p-0 group">
-                  <span className="group-hover:block absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-bottom scale-x-0 transition-transform group-hover:scale-x-100"></span>
-                  ПРОФИЛЬ
-                </div>
-              </Link>
-            </li>
-            <li className="mt-[-9px]">
-              <Link href="/">
-                <button onClick={handleLogout}>
-                  <div className="w-[70px] h-9 p-2.5 rounded-lg border border-white">
-                    <div className="text-white text-xs font-medium uppercase">
-                      Выход
-                    </div>
-                  </div>
-                </button>
-              </Link>
-            </li>
-          </ul>
-        ) : (
-          <ul className="inline-flex p-4 md:p-0 md:flex-row md:space-x-16 lg:space-x-2 my-5">
-            <li className="mt-[-9px]">
-              <button
-                onClick={() => {
-                  setShowModalLogin(true);
-                  seedData();
-                }}
-              >
-                <div className="w-16 h-9 p-2.5 rounded-lg border border-white">
-                  <div className="text-white text-xs font-medium uppercase">
-                    Войти
-                  </div>
-                </div>
-              </button>
-            </li>
-            <li className="mt-[-9px]">
-              <button
-                onClick={() => {
-                  setShowModalReg(true);
-                  seedData();
-                }}
-              >
-                <div className="w-44 h-9 p-2.5 bg-blue-950 rounded-lg justify-start items-start gap-2.5 inline-flex">
-                  <div className="text-white text-xs font-medium font-['Montserrat'] uppercase">
-                    Зарегистрироваться
-                  </div>
-                </div>
-              </button>
-            </li>
-          </ul>
-        )}
-      </div>
-      </nav>
-    );
+    return null;
   }
 
   return (
@@ -322,7 +236,7 @@ const Navbar = () => {
             <div className="mb-5">
               <input
                 name="lastName"
-                type="lastName"
+                type="text"
                 id="lastName"
                 defaultValue={formDataReg.LastName}
                 onChange={handleInputChangeReg}
@@ -334,7 +248,7 @@ const Navbar = () => {
             <div className="mb-5">
               <input
                 name="firstName"
-                type="firstName"
+                type="text"
                 id="firstName"
                 defaultValue={formDataReg.FirstName}
                 onChange={handleInputChangeReg}
@@ -346,7 +260,7 @@ const Navbar = () => {
             <div className="mb-5">
               <input
                 name="middleName"
-                type="middleName"
+                type="text"
                 id="middleName"
                 defaultValue={formDataReg.MiddleName}
                 onChange={handleInputChangeReg}
@@ -378,7 +292,7 @@ const Navbar = () => {
               <div className="w-full h-[48px] bg-blue-900 rounded-lg">
                 <div className="w-[154px] justify-center items-center inline-flex py-4 text-white text-[14px] leading-[17.07px] font-medium">
                   Зарегистрироваться
-                  <i className="icon icon-r-arrow w-3 h-3 ml-[10px]"></i>
+                  <i className="icon icon-r-arrow text-[12px] ml-[10px]"></i>
                 </div>
               </div>
             </button>
@@ -447,7 +361,7 @@ const Navbar = () => {
               <div className="w-full h-[48px] bg-blue-900 rounded-lg">
                 <div className="w-[154px] justify-center items-center inline-flex py-4 text-white text-[14px] leading-[17.07px] font-medium">
                   Войти
-                  <i className="icon icon-r-arrow w-3 h-3 ml-[10px]"></i>
+                  <i className="icon icon-r-arrow text-[12px] ml-[10px]"></i>
                 </div>
               </div>
             </button>
