@@ -16,7 +16,7 @@ const VacantSection = () => {
   }, []);
 
   return (
-    <main className="mt-10 mb-10">
+    <section className="mt-10 mb-10">
       <h2 className="text-4xl font-semibold leading-[50.4px] mb-5 text-left text-zinc-700">
         Наличие вакантных бюджетных мест по
         <br />
@@ -117,7 +117,7 @@ const VacantSection = () => {
           </table>
         </div>
       )}
-    </main>
+    </section>
   );
 };
 

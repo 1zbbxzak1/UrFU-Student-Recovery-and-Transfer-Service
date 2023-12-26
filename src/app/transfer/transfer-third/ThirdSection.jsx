@@ -145,7 +145,7 @@ const ThirdSection = () => {
           <div className="flex flex-row mt-[30px] mb-[45px]">
             <div className="w-[320px] h-[206px] ml-[290px] mr-[107px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
-                <i class="u-icon icon-calculator text-[24px] mr-[10px] mt-5 mb-[4px]"></i>
+                <i className="u-icon icon-calculator text-[24px] mr-[10px] mt-5 mb-[4px]"></i>
                 <p className="w-[245px] text-neutral-800 text-[14px] leading-[17.07px] font-normal text-left mt-5">
                   После расчёта стоимости студент посещает договорной отдел для
                   подписи и оплачивает договор в кассе УрФУ в т.ч. за
@@ -192,8 +192,8 @@ const ThirdSection = () => {
                     по кнопке ниже:
                   </p>
                   <button onClick={() => alert("Вы нажали кнопку")}>
-                    <div class="w-[345px] h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
-                      <div class="w-[345px] text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
+                    <div className="w-[345px] h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
+                      <div className="w-[345px] text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
                         Перейти к формированию заявки
                       </div>
                     </div>

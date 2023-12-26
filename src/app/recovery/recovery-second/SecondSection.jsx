@@ -148,7 +148,7 @@ const SecondSection = () => {
           <div className="flex flex-row mt-[30px] mb-[45px]">
             <div className="w-[285px] h-[245px] ml-[319px] mr-[107px] bg-white border border-neutral-300">
               <div className="flex flex-row items-center justify-center">
-                <i class="u-icon icon-calculator text-[24px] mr-[5px] mb-[4px]"></i>
+                <i className="u-icon icon-calculator text-[24px] mr-[5px] mb-[4px]"></i>
                 <p className="text-black text-[14px] leading-[17.07px] font-normal text-center mt-[15px] mb-[19px]">
                   Оплата
                 </p>
@@ -197,8 +197,8 @@ const SecondSection = () => {
                     по кнопке ниже:
                   </p>
                   <button onClick={() => alert("Вы нажали кнопку")}>
-                    <div class="w-[345px] h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
-                      <div class="w-[345px] text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
+                    <div className="w-[345px] h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
+                      <div className="w-[345px] text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
                         Перейти к формированию заявки
                       </div>
                     </div>
