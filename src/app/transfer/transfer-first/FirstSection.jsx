@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import "../transfer.css";
 
 const FirstSection = () => {
@@ -187,7 +188,6 @@ const FirstSection = () => {
       </section>
 
       <section className="mb-[130px]">
-        {/* TODO: Реализовать отправку документов через api */}
         <div className="u-card-rec-tran">
           <div className="container items-start justify-start">
             <div className="mt-[30px] mb-[45px]">
@@ -202,13 +202,13 @@ const FirstSection = () => {
                     <br />
                     по кнопке ниже:
                   </p>
-                  <button onClick={() => alert("Вы нажали кнопку")}>
-                    <div className="w-[345px] h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
-                      <div className="w-[345px] text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
+                  <Link href="/application/transfer/transfer-first">
+                    <div className="h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
+                      <div className="flex justify-center items-center p-5 text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
                         Перейти к формированию заявки
                       </div>
                     </div>
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="flex flex-col items-start justify-start ml-5">
