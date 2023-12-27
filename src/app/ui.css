@@ -123,6 +123,11 @@
   color: white;
 }
 
+.icon-l-arrow:before {
+  content: "\e927";
+  color: #A7A7A7;
+}
+
 .i-hidden:before {
   content: "\e921";
   color: #9CA2A9;
@@ -131,4 +136,16 @@
 .i-pencil:before {
   content: "\e933";
   color: #D3D3D3;
+}
+
+.underline-application {
+  width: auto;
+  height: 0.5px;
+  background-color: #d3d3d3;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.no-outline {
+  outline: none;
 }
