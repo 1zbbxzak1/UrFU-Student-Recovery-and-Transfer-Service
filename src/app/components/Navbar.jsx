@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     title: "ЗАЯВКИ",
-    href: "/",
+    href: "/application",
   },
   {
     title: "ВАКАНТНЫЕ МЕСТА",
