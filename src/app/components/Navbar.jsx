@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import ModalAuth from "./ModalAuth";
 import { seedData } from "../api/seed";
 import { apiFetch } from "../api/auth";
+import { getUserInfo } from "../api/user";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 
@@ -29,11 +30,12 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  
+
   const [showModalReg, setShowModalReg] = useState(false);
   const [showModalLogin, setShowModalLogin] = useState(false);
 
   const [authenticated, setAuthenticated] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
   const [isTokenChecked, setTokenChecked] = useState(false);
 
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -82,6 +84,7 @@ const Navbar = () => {
       localStorage.setItem("token", response.token);
 
       setShowModalReg(false);
+      getUserInfo(setUserInfo);
     } catch (error) {
       console.error("Registration failed", error.message);
     }
@@ -96,6 +99,7 @@ const Navbar = () => {
       localStorage.setItem("token", response.token);
 
       setShowModalLogin(false);
+      getUserInfo(setUserInfo);
     } catch (error) {
       console.error("Login failed", error.message);
     }
@@ -119,6 +123,7 @@ const Navbar = () => {
     };
 
     checkToken();
+    getUserInfo(setUserInfo);
   }, []);
 
   if (!isTokenChecked) {
@@ -149,7 +154,20 @@ const Navbar = () => {
           <ul className="inline-flex p-4 md:p-0 md:flex-row md:space-x-16 lg:space-x-12 mb-[12px]">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.href} title={link.title} />
+                {link.href === "/application" ? (
+                  <NavLink
+                    href={
+                      authenticated &&
+                      userInfo &&
+                      userInfo.id === "00000000-0000-0000-0000-000000000001"
+                        ? "/application/applicationAdmin"
+                        : link.href
+                    }
+                    title={link.title}
+                  ></NavLink>
+                ) : (
+                  <NavLink href={link.href} title={link.title} />
+                )}
               </li>
             ))}
           </ul>
