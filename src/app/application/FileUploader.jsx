@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FileUploader = ({ file, setFile }) => {
+const FileUploader = ({ name, file, setFile }) => {
   const [loading, setLoading] = useState(false);
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -9,7 +9,6 @@ const FileUploader = ({ file, setFile }) => {
     const selectedFile = event.target.files[0];
     setLoading(true);
 
-    // Принудительная задержка загрузки в 1 секунд
     await sleep(1000);
 
     setFile(selectedFile);
@@ -63,7 +62,7 @@ const FileUploader = ({ file, setFile }) => {
             ></div>
             <div className="u-file-cell-content">
               <div className="u-file-cell-content-wrapper">
-                <p>{file.name}</p>
+                <p>{name}</p>
                 <div className="u-file-cell-content-props">
                   <span style={{ marginRight: "5px" }}>
                     {Math.floor(file.size / 1024)} Кб

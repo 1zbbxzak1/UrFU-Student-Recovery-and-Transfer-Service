@@ -78,7 +78,7 @@ const AddApplication = () => {
           </span>
         </div>
 
-        <FileUploader file={passport} setFile={setPassport} />
+        <FileUploader name="Паспорт" file={passport} setFile={setPassport} />
 
         <div className="text-left mt-[40px] mb-[15px]">
           <span className="text-[#1E4391] text-[20px] leading-[24.38px] font-medium">
@@ -90,6 +90,7 @@ const AddApplication = () => {
         </div>
 
         <FileUploader
+          name="Приписное свидетельство"
           file={registrationCertificate}
           setFile={setRegistrationCertificate}
         />
@@ -100,7 +101,7 @@ const AddApplication = () => {
           </span>
         </div>
 
-        <FileUploader file={application} setFile={setApplication} />
+        <FileUploader name="Заявление" file={application} setFile={setApplication} />
 
         <div className="grid grid-cols-6 gap-x-[20px] mt-[60px] mb-[30px]">
           <div
@@ -116,7 +117,7 @@ const AddApplication = () => {
                 onClick={() => {
                   if (areAllDocumentsAttached()) {
                     AddApplicationButton(
-                      "перевод",
+                      "2",
                       "6",
                       selectedItemId,
                       passport,

@@ -79,7 +79,7 @@ const AddApplication = () => {
           </span>
         </div>
 
-        <FileUploader file={recordBook} setFile={setRecordBook} />
+        <FileUploader name="Зачетная книжка" file={recordBook} setFile={setRecordBook} />
 
         <div className="text-left mt-[40px] mb-[15px]">
           <span className="text-[#1E4391] text-[20px] leading-[24.38px] font-medium">
@@ -87,7 +87,7 @@ const AddApplication = () => {
           </span>
         </div>
 
-        <FileUploader file={certificate} setFile={setCertificate} />
+        <FileUploader name="Справка" file={certificate} setFile={setCertificate} />
 
         <div className="text-left mt-[40px] mb-[15px]">
           <span className="text-[#1E4391] text-[20px] leading-[24.38px] font-medium">
@@ -96,6 +96,7 @@ const AddApplication = () => {
         </div>
 
         <FileUploader
+          name="Заявление"
           file={application}
           setFile={setApplication}
         />
@@ -106,7 +107,7 @@ const AddApplication = () => {
           </span>
         </div>
 
-        <FileUploader file={characteristic} setFile={setCharacteristic} />
+        <FileUploader name="Характеристика/достижения" file={characteristic} setFile={setCharacteristic} />
 
         <div className="grid grid-cols-6 gap-x-[20px] mt-[60px] mb-[30px]">
           <div
@@ -122,7 +123,7 @@ const AddApplication = () => {
                 onClick={() => {
                   if (areAllDocumentsAttached()) {
                     AddApplicationButton(
-                      "перевод",
+                      "2",
                       "2",
                       selectedItemId,
                       recordBook,
