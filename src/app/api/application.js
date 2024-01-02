@@ -53,7 +53,10 @@ export const AddApplicationButton = async (
   }
 };
 
-export const getAllApplications = async (setAllApplications, filterByStatus) => {
+export const getAllApplications = async (
+  setAllApplications,
+  filterByStatus
+) => {
   const token = localStorage.getItem("token");
 
   try {
@@ -70,11 +73,14 @@ export const getAllApplications = async (setAllApplications, filterByStatus) => 
 
       // Фильтрация по статусу
       const filteredData = filterByStatus
-        ? data.filter(app => filterByStatus.includes(app.status))
+        ? data.filter((app) => filterByStatus.includes(app.status))
         : data;
 
       setAllApplications(filteredData);
-      console.log("User applications fetched and filtered successfully:", filteredData);
+      console.log(
+        "User applications fetched and filtered successfully:",
+        filteredData
+      );
     } else {
       console.error("Failed to fetch user applications");
     }
@@ -91,20 +97,43 @@ export const getApplicationById = async (id, setApplication) => {
       Authorization: `Bearer ${token}`,
     };
 
-    const response = await axios.get(`http://localhost:8080/api/applications/${id}`, {
-      headers,
-    });
+    const response = await axios.get(
+      `http://localhost:8080/api/applications/${id}`,
+      {
+        headers,
+      }
+    );
 
     if (response.status === 200) {
       const data = response.data;
 
       setApplication(data);
-      console.log("User applications fetched successfully:", data);
+      console.log("User application fetched successfully:", data);
     } else {
-      console.error("Failed to fetch user applications");
+      console.error("Failed to fetch user application");
     }
   } catch (error) {
-    console.error("Error fetching user applications", error);
+    console.error("Error fetching user application", error);
+  }
+};
+
+export const deleteApplicationById = async (id) => {
+  const token = localStorage.getItem("token");
+
+  try {
+    const headers = {
+      Authorization: `Bearer ${token}`,
+    };
+
+    const response = await axios.delete(
+      `http://localhost:8080/api/applications/${id}`,
+      {
+        headers,
+      }
+    );
+    console.log("User application delete successfully");
+  } catch (error) {
+    console.error("Error deleting user application");
   }
 };
 

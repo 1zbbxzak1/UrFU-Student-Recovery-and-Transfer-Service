@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { getStatusClassName } from "../const";
 import { formatInintialDate } from "../const";
 import { formatUpdateDate } from "../const";
@@ -7,6 +8,7 @@ import { getAllApplications } from "../api/application";
 
 const ApplicationSection = () => {
   const [applications, setApplications] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     getAllApplications(setApplications);
@@ -51,7 +53,12 @@ const ApplicationSection = () => {
                       : item.updateDate;
 
                     return (
-                      <tr key={item.id}>
+                      <tr
+                        key={item.id}
+                        onClick={() =>
+                          router.push(`/application/details/UserApp/${item.id}`)
+                        }
+                      >
                         <td>№{item.id}</td>
                         <td>{item.type}</td>
                         <td className="max-w-[350px]">

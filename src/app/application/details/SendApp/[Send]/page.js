@@ -111,7 +111,7 @@ export default function Page({ params }) {
             {userInfo && (
               <div className="grid grid-cols-2 grid-rows-2 gap-x-[237px] gap-y-5 mb-[30px]">
                 <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
                     ФИО:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -119,7 +119,7 @@ export default function Page({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
                     Телефон:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -127,7 +127,7 @@ export default function Page({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
                     Электронная почта:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -135,7 +135,7 @@ export default function Page({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
                     Telegram:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -179,8 +179,8 @@ export default function Page({ params }) {
             <div className="grid grid-cols-6 gap-x-[20px] mt-[60px] mb-[30px]">
               <Link href={`/application/details/FinishApp/${numericId}`}>
                 <button onClick={handleUpdateStatus}>
-                  <div className="w-[200px] h-[48px] border border-[#1E4391] rounded-lg">
-                    <div className="justify-center items-center inline-flex py-4 text-[#1E4391] text-[13px] leading-[15.85px] font-medium">
+                  <div className="w-[366px] h-[48px] bg-[#F8F8F8] border border-[#1E4391] rounded-[10px]">
+                    <div className="justify-center items-center inline-flex py-4 text-[#1E4391] text-[13px] leading-[15.85px] font-semibold">
                       Отправить на проверку
                     </div>
                   </div>

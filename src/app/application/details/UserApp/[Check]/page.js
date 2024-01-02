@@ -1,49 +1,42 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { getStatusClassName } from "@/app/const";
 import { getFileExtensionIcon } from "@/app/const";
 import { getApplicationById } from "@/app/api/application";
-import { updateStatus } from "@/app/api/application";
+import { deleteApplicationById } from "@/app/api/application";
 import { getUserInfoById } from "@/app/api/user";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import CreateApplication from "../../../CreateApplication";
 
 export default function Page({ params }) {
-  const numericId = parseInt(params.Finish, 10);
+  const numericId = parseInt(params.Check, 10);
   const [application, setApplication] = useState([]);
   const [userInfo, setUserInfo] = useState(null);
 
-  const handleUpdateStatus = async () => {
-    await updateStatus(numericId, {
-      status: "Принято",
-      comment: "",
-    });
-  };
+  const router = useRouter();
 
-  const handleAnotherStatusUpdate = async () => {
-    await updateStatus(numericId, {
-      status: "Отклонено",
-      comment: "",
-    });
+  const handleDeleteApplication = async () => {
+    await deleteApplicationById(numericId);
   };
 
   useEffect(() => {
-    if (params.Finish) {
+    if (params.Check) {
       getApplicationById(numericId, setApplication);
     }
     if (application.userId) {
       getUserInfoById(String(application.userId), setUserInfo);
     }
-  }, [params.Finish, application.userId]);
+  }, [params.Check, application.userId]);
 
   return (
     <main className="flex flex-col min-h-screen bg-[#F6F6F6]">
       <Navbar />
       <div className="flex-grow container mx-auto">
         <section className="mt-[40px] mb-[130px] mx-[80px]">
-          <Link href="/application/applicationAdmin">
+          <Link href="/application">
             <div className="w-full h-[48px]">
               <i className="icon icon-l-arrow text-[18px] mr-[5px]"></i>
               <div className="justify-center items-center inline-flex py-4 text-[#A7A7A7] text-[18px] leading-[21.94px] font-medium">
@@ -118,7 +111,7 @@ export default function Page({ params }) {
             {userInfo && (
               <div className="grid grid-cols-2 grid-rows-2 gap-x-[237px] gap-y-5 mb-[30px]">
                 <div>
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
                     ФИО:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -126,7 +119,7 @@ export default function Page({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
                     Телефон:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -134,7 +127,7 @@ export default function Page({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
                     Электронная почта:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -142,7 +135,7 @@ export default function Page({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] mb-[5px]">
+                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
                     Telegram:{" "}
                   </span>
                   <span className="text-[14px] leading-[17.07px]">
@@ -183,25 +176,15 @@ export default function Page({ params }) {
                 ))}
             </div>
 
-            <div className="inline-flex gap-x-[20px] mt-[60px] mb-[30px]">
-              <Link href="/application/applicationAdmin">
-                <button onClick={handleUpdateStatus}>
-                  <div className="w-[173px] h-[48px] border border-[#147246] rounded-[10px]">
-                    <div className="justify-center items-center inline-flex py-4 text-[#147246] text-[13px] leading-[15.85px] font-semibold">
-                      Одобрить
-                    </div>
+            <div className="grid grid-cols-2 mt-[60px]">
+              <div />
+              <button onClick={() => {handleDeleteApplication(), router.push(`/application`)}}>
+                <div className="w-[180px] h-[48px] bg-[#EF302B] rounded-[10px] ml-auto">
+                  <div className="flex justify-center items-center py-4 text-[#FFFFFF] text-[13px] leading-[15.85px] font-semibold">
+                    Удалить заявку
                   </div>
-                </button>
-              </Link>
-              <Link href="/application/applicationAdmin">
-                <button onClick={handleAnotherStatusUpdate}>
-                  <div className="w-[173px] h-[48px] border border-[#EF302B] rounded-[10px]">
-                    <div className="flex justify-center items-center py-4 text-[#EF302B] text-[13px] leading-[15.85px] font-semibold">
-                      Отказать
-                    </div>
-                  </div>
-                </button>
-              </Link>
+                </div>
+              </button>
             </div>
           </CreateApplication>
         </section>
