@@ -1,6 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { getStatusClassName } from "../../const";
+import { formatInintialDate } from "../../const";
+import { formatUpdateDate } from "../../const";
 import { getAllApplications } from "@/app/api/application";
 import TypeTag from "../TypeTag";
 
@@ -15,51 +18,6 @@ const ApplicationSection = () => {
     setTag(newTag);
     await getAllApplications(setApplications, appTag);
   };
-
-  const formatInintialDate = (dateString) => {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    const formattedDate = `${day.toString().padStart(2, "0")}.${month
-      .toString()
-      .padStart(2, "0")}.${year}`;
-
-    return formattedDate;
-  };
-
-  const formatUpdateDate = (updateDate) => {
-    const dateObject = new Date(updateDate);
-
-    const hours = dateObject.getUTCHours();
-    const minutes = dateObject.getUTCMinutes();
-    const day = dateObject.getUTCDate();
-    const month = dateObject.getUTCMonth() + 1;
-    const year = dateObject.getUTCFullYear();
-
-    const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes
-      .toString()
-      .padStart(2, "0")}`;
-    const formattedDate = `${day.toString().padStart(2, "0")}.${month
-      .toString()
-      .padStart(2, "0")}.${year}`;
-
-    return `${formattedTime} ${formattedDate}`;
-  };
-
-  function getStatusClassName(status) {
-    switch (status) {
-      case "На рассмотрении":
-        return "u-status u-status-intermediate";
-      case "Принято":
-        return "u-status u-status-success";
-      case "Отклонено":
-        return "u-status u-status-danger";
-      default:
-        return "u-status u-status-info";
-    }
-  }
 
   useEffect(() => {
     handleTagChange("Отправленные", ["Отправлено"]);
@@ -114,7 +72,7 @@ const ApplicationSection = () => {
                   <th>Номер заявки</th>
                   <th>ФИО</th>
                   <th>Тип заявки</th>
-                  <th className="max-w-[270px]">Направление</th>
+                  <th className="max-w-[250px]">Направление</th>
                   <th>Дата подачи</th>
                   <th>Обновлено</th>
                   <th>Статус</th>
@@ -139,32 +97,44 @@ const ApplicationSection = () => {
                         ? item
                         : itemIdAsString.toLowerCase().includes(search);
                     })
-                    .map((item) => (
-                      <tr
-                        key={item.id}
-                        onClick={() => {
-                          if (item.status === "Отправлено") {
-                            router.push(`/application/details/SendApp/${item.id}`);
-                          } else if (item.status === "На рассмотрении") {
-                            router.push(`/application/details/FinishApp/${item.id}`);
-                          }
-                        }}
-                      >
-                        <td>№{item.id}</td>
-                        <td>{item.userFullName}</td>
-                        <td>{item.type}</td>
-                        <td className="max-w-[270px]">
-                          {item.direction.code} {item.direction.name}
-                        </td>
-                        <td>{formatInintialDate(item.initialDate)}</td>
-                        <td>{formatUpdateDate(item.updateDate)}</td>
-                        <td>
-                          <div className={getStatusClassName(item.status)}>
-                            {item.status}
-                          </div>
-                        </td>
-                      </tr>
-                    ))
+                    .map((item) => {
+                      const lastStatusUpdate =
+                        item.statusUpdates[item.statusUpdates.length - 1];
+                      const lastUpdateDate = lastStatusUpdate
+                        ? lastStatusUpdate.date
+                        : item.updateDate;
+
+                      return (
+                        <tr
+                          key={item.id}
+                          onClick={() => {
+                            if (item.status === "Отправлено") {
+                              router.push(
+                                `/application/details/SendApp/${item.id}`
+                              );
+                            } else if (item.status === "На рассмотрении") {
+                              router.push(
+                                `/application/details/FinishApp/${item.id}`
+                              );
+                            }
+                          }}
+                        >
+                          <td>№{item.id}</td>
+                          <td>{item.userFullName}</td>
+                          <td>{item.type}</td>
+                          <td className="max-w-[250px]">
+                            {item.direction.code} {item.direction.name}
+                          </td>
+                          <td>{formatInintialDate(item.initialDate)}</td>
+                          <td>{formatUpdateDate(lastUpdateDate)}</td>
+                          <td>
+                            <div className={getStatusClassName(item.status)}>
+                              {item.status}
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })
                 )}
               </tbody>
             </table>

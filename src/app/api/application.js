@@ -83,7 +83,7 @@ export const getAllApplications = async (setAllApplications, filterByStatus) => 
   }
 };
 
-export const fetchApplication = async (id, setApplication) => {
+export const getApplicationById = async (id, setApplication) => {
   const token = localStorage.getItem("token");
 
   try {
@@ -105,5 +105,29 @@ export const fetchApplication = async (id, setApplication) => {
     }
   } catch (error) {
     console.error("Error fetching user applications", error);
+  }
+};
+
+export const updateStatus = async (numericId, updatedData) => {
+  const applicationId = numericId;
+
+  try {
+    const response = await axios.post(
+      `http://localhost:8080/api/applications/${applicationId}/status`,
+      updatedData,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
+
+    if (response.status === 204) {
+      console.log("Status updated successfully");
+    } else {
+      console.error("Failed to update status");
+    }
+  } catch (error) {
+    console.error("Error updating status:", error.message);
   }
 };

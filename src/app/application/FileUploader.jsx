@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getFileExtensionIcon } from "../const";
 
 const FileUploader = ({ name, file, setFile }) => {
   const [loading, setLoading] = useState(false);
@@ -13,35 +14,6 @@ const FileUploader = ({ name, file, setFile }) => {
 
     setFile(selectedFile);
     setLoading(false);
-  };
-
-  const getFileExtensionIcon = (fileName) => {
-    const extension = fileName.split(".").pop().toLowerCase();
-
-    switch (extension) {
-      case "pdf":
-        return "pdf";
-      case "doc":
-      case "docx":
-        return "doc";
-      case "zip":
-        return "zip";
-      case "xls":
-      case "xlsx":
-        return "xls";
-      case "img":
-        return "img";
-      case "png":
-        return "png";
-      case "jpg":
-        return "jpg";
-      case "ppt":
-        return "ppt";
-      case "svg":
-        return "svg";
-      default:
-        return "default";
-    }
   };
 
   const handleRemoveFile = () => {

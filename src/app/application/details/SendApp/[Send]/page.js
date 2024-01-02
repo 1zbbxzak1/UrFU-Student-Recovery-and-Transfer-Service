@@ -1,9 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Link from "next/link";
-import { fetchApplication } from "@/app/api/application";
-import { getUserInfo } from "@/app/api/user";
+import { getStatusClassName } from "@/app/const";
+import { getFileExtensionIcon } from "@/app/const";
+import { getApplicationById } from "@/app/api/application";
+import { updateStatus } from "@/app/api/application";
+import { getUserInfoById } from "@/app/api/user";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import CreateApplication from "../../../CreateApplication";
@@ -13,83 +15,21 @@ export default function Page({ params }) {
   const [application, setApplication] = useState([]);
   const [userInfo, setUserInfo] = useState(null);
 
-  const [requestData, setRequestData] = useState({
-    status: "На рассмотрении",
-    comment: "",
-  });
-
   const handleUpdateStatus = async () => {
-    const applicationId = numericId;
-
-    try {
-      const response = await axios.post(
-        `http://localhost:8080/api/applications/${applicationId}/status`,
-        requestData,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
-
-      if (response.status === 204) {
-        console.log("Status updated successfully");
-      } else {
-        console.error("Failed to update status");
-      }
-    } catch (error) {
-      console.error("Error updating status:", error.message);
-    }
-  };
-
-  const getFileExtensionIcon = (fileName) => {
-    const extension = fileName.split(".").pop().toLowerCase();
-
-    switch (extension) {
-      case "pdf":
-        return "pdf";
-      case "doc":
-      case "docx":
-        return "doc";
-      case "zip":
-        return "zip";
-      case "xls":
-      case "xlsx":
-        return "xls";
-      case "img":
-        return "img";
-      case "png":
-        return "png";
-      case "jpg":
-        return "jpg";
-      case "ppt":
-        return "ppt";
-      case "svg":
-        return "svg";
-      default:
-        return "default";
-    }
+    await updateStatus(numericId, {
+      status: "На рассмотрении",
+      comment: "",
+    });
   };
 
   useEffect(() => {
     if (params.Send) {
-      fetchApplication(numericId, setApplication);
+      getApplicationById(numericId, setApplication);
     }
-    getUserInfo(setUserInfo);
-  }, [params.Send]);
-
-  function getStatusClassName(status) {
-    switch (status) {
-      case "На рассмотрении":
-        return "u-status u-status-intermediate";
-      case "Принято":
-        return "u-status u-status-success";
-      case "Отклонено":
-        return "u-status u-status-danger";
-      default:
-        return "u-status u-status-info";
+    if (application.userId) {
+      getUserInfoById(String(application.userId), setUserInfo);
     }
-  }
+  }, [params.Send, application.userId]);
 
   return (
     <main className="flex flex-col min-h-screen bg-[#F6F6F6]">
@@ -227,7 +167,9 @@ export default function Page({ params }) {
                           )}`}
                         ></div>
                         <div className="mr-auto">{file.name}</div>
-                        <div><i class="u-icon icon-download-line text-[20px]"></i></div>
+                        <div>
+                          <i className="u-icon icon-download-line text-[20px]"></i>
+                        </div>
                       </div>
                     </button>
                   </a>
