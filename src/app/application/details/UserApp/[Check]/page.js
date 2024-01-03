@@ -24,19 +24,26 @@ export default function Page({ params }) {
     await deleteApplicationById(numericId);
   };
 
-  const lastStatusUpdate = application.statusUpdates;
-  const lastUpdateDate = lastStatusUpdate
-    ? lastStatusUpdate.date
+  const firstStatusUpdate =
+    application.statusUpdates
+      ? application.statusUpdates[application.statusUpdates.length - 1]
+      : null;
+
+  const firstUpdateDate = firstStatusUpdate
+    ? firstStatusUpdate.date
     : application.updateDate;
 
   useEffect(() => {
     if (params.Check) {
       getApplicationById(numericId, setApplication);
     }
-    if (application.userId) {
+  }, [params.Check]);
+
+  useEffect(() => {
+    if (application && application.userId) {
       getUserInfoById(String(application.userId), setUserInfo);
     }
-  }, [params.Check, application.userId]);
+  }, [application.userId]);
 
   return (
     <main className="flex flex-col min-h-screen bg-[#F6F6F6]">
@@ -122,7 +129,7 @@ export default function Page({ params }) {
                     Обновлено:{" "}
                   </span>
                   <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
-                    {formatUpdateDate(application.updateDate)}
+                    {formatUpdateDate(firstUpdateDate)}
                   </span>
                 </div>
               </div>

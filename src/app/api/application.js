@@ -53,7 +53,31 @@ export const AddApplicationButton = async (
   }
 };
 
-export const getAllApplications = async (
+export const getAllApplications = async (setAllApplications) => {
+  const token = localStorage.getItem("token");
+
+  try {
+    const headers = {
+      Authorization: `Bearer ${token}`,
+    };
+
+    const response = await axios.get("http://localhost:8080/api/applications", {
+      headers,
+    });
+
+    if (response.status === 200) {
+      const data = response.data;
+      setAllApplications(data);
+      console.log("User applications fetched and filtered successfully:", data);
+    } else {
+      console.error("Failed to fetch user applications");
+    }
+  } catch (error) {
+    console.error("Error fetching user applications", error);
+  }
+};
+
+export const getApplicationsByStatus = async (
   setAllApplications,
   filterByStatus
 ) => {

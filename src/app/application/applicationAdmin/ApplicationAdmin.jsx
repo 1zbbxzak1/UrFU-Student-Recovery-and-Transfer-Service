@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { getStatusClassName } from "../../utils/const";
 import { formatInintialDate } from "../../utils/const";
 import { formatUpdateDate } from "../../utils/const";
-import { getAllApplications } from "@/app/api/application";
+import { getApplicationsByStatus } from "@/app/api/application";
 import TypeTag from "../components/TypeTag";
 
 const ApplicationSection = () => {
@@ -16,7 +16,7 @@ const ApplicationSection = () => {
 
   const handleTagChange = async (newTag, appTag) => {
     setTag(newTag);
-    await getAllApplications(setApplications, appTag);
+    await getApplicationsByStatus(setApplications, appTag);
   };
 
   useEffect(() => {
@@ -98,10 +98,9 @@ const ApplicationSection = () => {
                         : itemIdAsString.toLowerCase().includes(search);
                     })
                     .map((item) => {
-                      const lastStatusUpdate =
-                        item.statusUpdates[item.statusUpdates.length - 1];
-                      const lastUpdateDate = lastStatusUpdate
-                        ? lastStatusUpdate.date
+                      const firstStatusUpdate = item.statusUpdates[0];
+                      const firstUpdateDate = firstStatusUpdate
+                        ? firstStatusUpdate.date
                         : item.updateDate;
 
                       return (
@@ -126,7 +125,7 @@ const ApplicationSection = () => {
                             {item.direction.code} {item.direction.name}
                           </td>
                           <td>{formatInintialDate(item.initialDate)}</td>
-                          <td>{formatUpdateDate(lastUpdateDate)}</td>
+                          <td>{formatUpdateDate(firstUpdateDate)}</td>
                           <td>
                             <div className={getStatusClassName(item.status)}>
                               {item.status}

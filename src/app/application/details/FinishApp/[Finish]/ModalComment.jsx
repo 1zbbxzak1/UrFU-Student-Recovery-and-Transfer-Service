@@ -39,7 +39,7 @@ const ModalComment = ({ setComment, isVisible, onClose, onSend, href }) => {
               onClick={() => {
                 onClose();
                 onSend();
-                // window.location.href = href;
+                window.location.href = href;
               }}
             >
               <div className="w-[120px] h-[48px] border border-[#1E4391] rounded-lg">
