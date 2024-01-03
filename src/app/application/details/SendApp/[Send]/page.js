@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getStatusClassName } from "@/app/const";
-import { getFileExtensionIcon } from "@/app/const";
+import { getStatusClassName } from "@/app/utils/const";
+import { getFileExtensionIcon } from "@/app/utils/const";
 import { getApplicationById } from "@/app/api/application";
 import { updateStatus } from "@/app/api/application";
 import { getUserInfoById } from "@/app/api/user";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import CreateApplication from "../../../CreateApplication";
+import CreateApplication from "../../../components/CreateApplication";
 
 export default function Page({ params }) {
   const numericId = parseInt(params.Send, 10);

@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { seedData } from "@/app/api/seed";
 import { AddApplicationButton } from "@/app/api/application";
-import CreateApplication from "../../CreateApplication";
-import SelectDirection from "../../SelectDirection";
-import FileUploader from "../../FileUploader";
-import ModalApplicationSend from "../../ModalApplicationSend";
-import ModalApplicationCancel from "../../ModalApplicationCancel";
+import CreateApplication from "../../components/CreateApplication";
+import SelectDirection from "../../components/SelectDirection";
+import FileUploader from "../../components/FileUploader";
+import ModalApplicationSend from "../../components/ModalApplicationSend";
+import ModalApplicationCancel from "../../components/ModalApplicationCancel";
 
 const AddApplication = () => {
   const [selectedItemId, setSelectedItemId] = useState(null);

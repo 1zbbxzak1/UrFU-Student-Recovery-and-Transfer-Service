@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getFileExtensionIcon } from "../const";
+import { getFileExtensionIcon } from "../../utils/const";
 
 const FileUploader = ({ name, file, setFile }) => {
   const [loading, setLoading] = useState(false);

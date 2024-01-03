@@ -1,3 +1,11 @@
+let sessionStatusValue = false;
+
+export const getSessionStatus = () => sessionStatusValue;
+
+export const setSessionStatus = (value) => {
+  sessionStatusValue = value;
+};
+
 export function getStatusClassName(status) {
   switch (status) {
     case "На рассмотрении":

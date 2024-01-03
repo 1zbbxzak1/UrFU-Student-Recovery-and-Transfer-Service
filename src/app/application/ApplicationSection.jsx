@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { getStatusClassName } from "../const";
-import { formatInintialDate } from "../const";
-import { formatUpdateDate } from "../const";
+import { getStatusClassName } from "../utils/const";
+import { formatInintialDate } from "../utils/const";
+import { formatUpdateDate } from "../utils/const";
 import { getAllApplications } from "../api/application";
 
 const ApplicationSection = () => {

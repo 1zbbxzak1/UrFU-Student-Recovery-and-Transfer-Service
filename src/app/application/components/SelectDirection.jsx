@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getDataVacant } from "../api/vacant";
+import { getDataVacant } from "../../api/vacant";
 
 const SelectDirection = ({
   selectedItemId,

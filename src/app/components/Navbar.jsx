@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import ModalAuth from "./ModalAuth";
+import { getSessionStatus, setSessionStatus } from "../utils/const";
 import { seedData } from "../api/seed";
 import { apiFetch } from "../api/auth";
 import { getUserInfo } from "../api/user";
@@ -80,6 +81,8 @@ const Navbar = () => {
       const response = await apiFetch("/auth/register", "POST", formDataReg);
       console.log("Registration successful", response);
 
+      getSessionStatus();
+      setSessionStatus(true);
       setAuthenticated(true);
       localStorage.setItem("token", response.token);
 
@@ -95,6 +98,8 @@ const Navbar = () => {
       const response = await apiFetch("/auth/login", "POST", formDataLogin);
       console.log("Login successful", response);
 
+      getSessionStatus();
+      setSessionStatus(true);
       setAuthenticated(true);
       localStorage.setItem("token", response.token);
 
@@ -107,7 +112,11 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+
+    getSessionStatus();
+    setSessionStatus(false);
     setAuthenticated(false);
+
     console.log("Remove token");
   };
 
@@ -116,6 +125,8 @@ const Navbar = () => {
       const storedToken = localStorage.getItem("token");
 
       if (storedToken) {
+        getSessionStatus();
+        setSessionStatus(true);
         setAuthenticated(true);
       }
 

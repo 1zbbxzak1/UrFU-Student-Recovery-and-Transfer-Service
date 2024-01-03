@@ -1,9 +1,24 @@
 "use client";
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { getSessionStatus } from "@/app/utils/const";
+import ModalWarning from "@/app/components/ModalWarning";
 import "../transfer.css";
 
 const SecondSection = () => {
+  const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
+
+  const handleLinkClick = (path, router, setShowModal) => {
+    const session = getSessionStatus();
+
+    if (session) {
+      router.push(path);
+    } else {
+      setShowModal(true);
+    }
+  };
+
   return (
     <main className="mt-10 mb-10 mx-auto">
       <h2 className="mx-[80px] mb-[80px] text-[36px] leading-[50.4px] text-left text-zinc-700">
@@ -168,13 +183,20 @@ const SecondSection = () => {
                     <br />
                     по кнопке ниже:
                   </p>
-                  <Link href="/application/transfer/transfer-second">
-                    <div className="h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
-                      <div className="flex justify-center items-center p-5 text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
-                        Перейти к формированию заявки
-                      </div>
+                  <button
+                    className="h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]"
+                    onClick={() =>
+                      handleLinkClick(
+                        "/application/transfer/transfer-second",
+                        router,
+                        setShowModal
+                      )
+                    }
+                  >
+                    <div className="flex justify-center items-center p-5 text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
+                      Перейти к формированию заявки
                     </div>
-                  </Link>
+                  </button>
                 </div>
 
                 <div className="flex flex-col items-start justify-start ml-5">
@@ -238,16 +260,20 @@ const SecondSection = () => {
             <div className="flex flex-row items-center justify-center">
               <i className="u-icon icon-clock text-[32px] mt-[6px] mr-[10px]"></i>
               <p className="w-[268px] text-[#1E4391] text-[18px] leading-[21.94px] font-medium text-left mt-[20px] mb-[15px]">
-              Сколько времени ждать решения о переводе?
+                Сколько времени ждать решения о переводе?
               </p>
             </div>
             <div className="w-44 h-px border border-neutral-800 mx-auto mb-[15px]"></div>
             <p className="text-center text-neutral-800 text-[14px] leading-[17.07px] font-normal">
-            Решение занимает от одной недели до двух.
+              Решение занимает от одной недели до двух.
             </p>
           </div>
         </div>
       </section>
+      <ModalWarning
+        isVisible={showModal}
+        onClose={() => setShowModal(false)}
+      ></ModalWarning>
     </main>
   );
 };

@@ -1,9 +1,24 @@
 "use client";
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { getSessionStatus } from "@/app/utils/const";
+import ModalWarning from "@/app/components/ModalWarning";
 import "../transfer.css";
 
 const FifthSection = () => {
+  const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
+
+  const handleLinkClick = (path, router, setShowModal) => {
+    const session = getSessionStatus();
+
+    if (session) {
+      router.push(path);
+    } else {
+      setShowModal(true);
+    }
+  };
+
   return (
     <main className="mt-10 mb-10 mx-auto">
       <h2 className="mx-[80px] mb-[80px] text-[36px] leading-[50.4px] text-left text-zinc-700">
@@ -228,13 +243,20 @@ const FifthSection = () => {
                     <br />
                     по кнопке ниже:
                   </p>
-                  <Link href="/application/transfer/transfer-fifth">
-                    <div className="h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]">
-                      <div className="flex justify-center items-center p-5 text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
-                        Перейти к формированию заявки
-                      </div>
+                  <button
+                    className="h-[60px] bg-blue-900 rounded-lg mt-[20px] ml-[28px]"
+                    onClick={() =>
+                      handleLinkClick(
+                        "/application/transfer/transfer-fifth",
+                        router,
+                        setShowModal
+                      )
+                    }
+                  >
+                    <div className="flex justify-center items-center p-5 text-white text-[16px] leading-[19.5px] font-extrabold py-[20px]">
+                      Перейти к формированию заявки
                     </div>
-                  </Link>
+                  </button>
                 </div>
 
                 <div className="flex flex-col items-start justify-start ml-5">
@@ -310,6 +332,10 @@ const FifthSection = () => {
           </div>
         </div>
       </section>
+      <ModalWarning
+        isVisible={showModal}
+        onClose={() => setShowModal(false)}
+      ></ModalWarning>
     </main>
   );
 };

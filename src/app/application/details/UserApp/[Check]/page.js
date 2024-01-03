@@ -2,14 +2,16 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { getStatusClassName } from "@/app/const";
-import { getFileExtensionIcon } from "@/app/const";
+import { getStatusClassName } from "@/app/utils/const";
+import { getFileExtensionIcon } from "@/app/utils/const";
 import { getApplicationById } from "@/app/api/application";
 import { deleteApplicationById } from "@/app/api/application";
 import { getUserInfoById } from "@/app/api/user";
+import { formatInintialDate } from "@/app/utils/const";
+import { formatUpdateDate } from "@/app/utils/const";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import CreateApplication from "../../../CreateApplication";
+import CreateApplication from "../../../components/CreateApplication";
 
 export default function Page({ params }) {
   const numericId = parseInt(params.Check, 10);
@@ -21,6 +23,11 @@ export default function Page({ params }) {
   const handleDeleteApplication = async () => {
     await deleteApplicationById(numericId);
   };
+
+  const lastStatusUpdate = application.statusUpdates;
+  const lastUpdateDate = lastStatusUpdate
+    ? lastStatusUpdate.date
+    : application.updateDate;
 
   useEffect(() => {
     if (params.Check) {
@@ -62,90 +69,66 @@ export default function Page({ params }) {
                 Общая информация
               </span>
             </div>
-            <div className="flex flex-col">
-              <div className="text-left mt-[15px] mb-[10px]">
-                <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
-                  Тип заявки:{" "}
-                </span>
-                <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
-                  {application.detailedType}
-                </span>
-              </div>
+            <div className="grid grid-cols-2 mb-[40px]">
               {application.direction && (
-                <div className="text-left mb-[10px]">
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
-                    Направление:{" "}
-                  </span>
-                  <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
-                    {application.direction.code} {application.direction.name}
-                  </span>
-                </div>
-              )}
-              {application.direction && (
-                <div className="text-left mb-[10px]">
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
-                    Форма обучения:{" "}
-                  </span>
-                  <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
-                    {application.direction.form}
-                  </span>
-                </div>
-              )}
-              {application.direction && (
-                <div className="text-left mb-[10px]">
-                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
-                    Курс:{" "}
-                  </span>
-                  <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
-                    {application.direction.course}
-                  </span>
-                </div>
-              )}
-            </div>
+                <div>
+                  <div className="text-left mt-[15px] mb-[10px]">
+                    <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
+                      Тип заявки:{" "}
+                    </span>
+                    <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                      {application.detailedType}
+                    </span>
+                  </div>
 
-            <div className="text-left mt-[40px]">
-              <p className="text-[#1E4391] text-[20px] leading-[24.38px] font-medium mb-[15px]">
-                Данные студента
-              </p>
-            </div>
-            {userInfo && (
-              <div className="grid grid-cols-2 grid-rows-2 gap-x-[237px] gap-y-5 mb-[30px]">
-                <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
-                    ФИО:{" "}
+                  <div className="text-left mb-[10px]">
+                    <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
+                      Направление:{" "}
+                    </span>
+                    <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                      {application.direction.code} {application.direction.name}
+                    </span>
+                  </div>
+                  <div className="text-left mb-[10px]">
+                    <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
+                      Форма обучения:{" "}
+                    </span>
+                    <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                      {application.direction.form}
+                    </span>
+                  </div>
+                  <div className="text-left">
+                    <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
+                      Курс:{" "}
+                    </span>
+                    <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                      {application.direction.course}
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              <div>
+                <div className="text-left mt-[15px] mb-[10px] mx-auto">
+                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
+                    Создано:{" "}
                   </span>
-                  <span className="text-[14px] leading-[17.07px]">
-                    {userInfo.fullName}
+                  <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                    {formatInintialDate(application.initialDate)}
                   </span>
                 </div>
-                <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
-                    Телефон:{" "}
+                <div className="text-left mx-auto">
+                  <span className="text-[#A7A7A7] text-[14px] leading-[17.07px] font-medium">
+                    Обновлено:{" "}
                   </span>
-                  <span className="text-[14px] leading-[17.07px]">
-                    {userInfo.phoneNumber || "-"}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
-                    Электронная почта:{" "}
-                  </span>
-                  <span className="text-[14px] leading-[17.07px]">
-                    {userInfo.email}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[#A7A7A7] text-[10px] leading-[12.19px] mb-[5px]">
-                    Telegram:{" "}
-                  </span>
-                  <span className="text-[14px] leading-[17.07px]">
-                    {userInfo.telegram || "-"}
+                  <span className="text-[#222222] text-[14px] leading-[17.07px] font-medium">
+                    {formatUpdateDate(application.updateDate)}
                   </span>
                 </div>
               </div>
-            )}
+            </div>
 
-            <div className="text-left mt-[40px] mb-[15px]">
+            <div className="text-left mb-[15px]">
               <span className="text-[#1E4391] text-[20px] leading-[24.38px] font-medium">
                 Документы
               </span>
@@ -176,9 +159,15 @@ export default function Page({ params }) {
                 ))}
             </div>
 
+            {/* TODO: Реализовать отслеживание статуса */}
+
             <div className="grid grid-cols-2 mt-[60px]">
               <div />
-              <button onClick={() => {handleDeleteApplication(), router.push(`/application`)}}>
+              <button
+                onClick={() => {
+                  handleDeleteApplication(), router.push(`/application`);
+                }}
+              >
                 <div className="w-[180px] h-[48px] bg-[#EF302B] rounded-[10px] ml-auto">
                   <div className="flex justify-center items-center py-4 text-[#FFFFFF] text-[13px] leading-[15.85px] font-semibold">
                     Удалить заявку

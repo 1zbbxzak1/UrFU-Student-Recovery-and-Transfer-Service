@@ -1,31 +1,38 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getStatusClassName } from "@/app/const";
-import { getFileExtensionIcon } from "@/app/const";
+import { getStatusClassName } from "@/app/utils/const";
+import { getFileExtensionIcon } from "@/app/utils/const";
 import { getApplicationById } from "@/app/api/application";
 import { updateStatus } from "@/app/api/application";
 import { getUserInfoById } from "@/app/api/user";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import CreateApplication from "../../../CreateApplication";
+import CreateApplication from "../../../components/CreateApplication";
+import ModalComment from "./ModalComment";
 
 export default function Page({ params }) {
   const numericId = parseInt(params.Finish, 10);
   const [application, setApplication] = useState([]);
   const [userInfo, setUserInfo] = useState(null);
 
+  const [comment, setComment] = useState("");
+  const [showModalSuccess, setShowModalSuccess] = useState(false);
+  const [showModalReject, setShowModalReject] = useState(false);
+
   const handleUpdateStatus = async () => {
+    console.log("Before Update:", comment);
     await updateStatus(numericId, {
       status: "Принято",
-      comment: "",
+      comment: comment,
     });
+    console.log("After Update:", comment);
   };
 
   const handleAnotherStatusUpdate = async () => {
     await updateStatus(numericId, {
       status: "Отклонено",
-      comment: "",
+      comment: comment,
     });
   };
 
@@ -184,26 +191,36 @@ export default function Page({ params }) {
             </div>
 
             <div className="inline-flex gap-x-[20px] mt-[60px] mb-[30px]">
-              <Link href="/application/applicationAdmin">
-                <button onClick={handleUpdateStatus}>
-                  <div className="w-[173px] h-[48px] border border-[#147246] rounded-[10px]">
-                    <div className="justify-center items-center inline-flex py-4 text-[#147246] text-[13px] leading-[15.85px] font-semibold">
-                      Одобрить
-                    </div>
+              <button onClick={() => setShowModalSuccess(true)}>
+                <div className="w-[173px] h-[48px] border border-[#147246] rounded-[10px]">
+                  <div className="justify-center items-center inline-flex py-4 text-[#147246] text-[13px] leading-[15.85px] font-semibold">
+                    Одобрить
                   </div>
-                </button>
-              </Link>
-              <Link href="/application/applicationAdmin">
-                <button onClick={handleAnotherStatusUpdate}>
-                  <div className="w-[173px] h-[48px] border border-[#EF302B] rounded-[10px]">
-                    <div className="flex justify-center items-center py-4 text-[#EF302B] text-[13px] leading-[15.85px] font-semibold">
-                      Отказать
-                    </div>
+                </div>
+              </button>
+              <button onClick={() => setShowModalReject(true)}>
+                <div className="w-[173px] h-[48px] border border-[#EF302B] rounded-[10px]">
+                  <div className="flex justify-center items-center py-4 text-[#EF302B] text-[13px] leading-[15.85px] font-semibold">
+                    Отказать
                   </div>
-                </button>
-              </Link>
+                </div>
+              </button>
             </div>
           </CreateApplication>
+          <ModalComment
+            setComment={setComment}
+            isVisible={showModalSuccess}
+            onClose={() => setShowModalSuccess(false)}
+            onSend={handleUpdateStatus}
+            href="/application/applicationAdmin"
+          ></ModalComment>
+          <ModalComment
+            setComment={setComment}
+            isVisible={showModalReject}
+            onClose={() => setShowModalReject(false)}
+            onSend={handleAnotherStatusUpdate}
+            href="/application/applicationAdmin"
+          ></ModalComment>
         </section>
       </div>
       <Footer />
