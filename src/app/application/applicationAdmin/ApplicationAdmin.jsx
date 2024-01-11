@@ -70,7 +70,7 @@ const ApplicationSection = () => {
               <thead>
                 <tr>
                   <th>Номер заявки</th>
-                  <th>ФИО</th>
+                  <th className="max-w-[200px]">ФИО</th>
                   <th>Тип заявки</th>
                   <th className="max-w-[250px]">Направление</th>
                   <th>Дата подачи</th>
@@ -98,9 +98,10 @@ const ApplicationSection = () => {
                         : itemIdAsString.toLowerCase().includes(search);
                     })
                     .map((item) => {
-                      const firstStatusUpdate = item.statusUpdates[0];
-                      const firstUpdateDate = firstStatusUpdate
-                        ? firstStatusUpdate.date
+                      const lastStatusUpdate =
+                        item.statusUpdates[item.statusUpdates.length - 1];
+                      const lastUpdateDate = lastStatusUpdate
+                        ? lastStatusUpdate.date
                         : item.updateDate;
 
                       return (
@@ -119,13 +120,13 @@ const ApplicationSection = () => {
                           }}
                         >
                           <td>№{item.id}</td>
-                          <td>{item.userFullName}</td>
+                          <td className="max-w-[150px]">{item.userFullName}</td>
                           <td>{item.type}</td>
                           <td className="max-w-[250px]">
                             {item.direction.code} {item.direction.name}
                           </td>
                           <td>{formatInintialDate(item.initialDate)}</td>
-                          <td>{formatUpdateDate(firstUpdateDate)}</td>
+                          <td>{formatUpdateDate(lastUpdateDate)}</td>
                           <td>
                             <div className={getStatusClassName(item.status)}>
                               {item.status}
