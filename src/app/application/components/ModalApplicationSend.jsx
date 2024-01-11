@@ -1,6 +1,10 @@
+"use client";
 import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const ModalApplicationSend = ({ isVisible, onClose, href }) => {
+  const router = useRouter();
+
   useEffect(() => {
     const handleBodyScroll = (shouldDisableScroll) => {
       document.body.style.overflow = shouldDisableScroll ? "hidden" : "auto";
@@ -22,7 +26,7 @@ const ModalApplicationSend = ({ isVisible, onClose, href }) => {
       <div className="w-[880px] flex flex-col relative">
         <button
           className="u-button-cross absolute top-0 right-[-70px]"
-          onClick={() => {onClose(); window.location.href = href; }}
+          onClick={() => {onClose(); router.push(href); }}
         ></button>
         <div className="bg-white rounded-[20px] border border-neutral-300">
           <div className="grid grid-rows-3 justify-center items-center pt-[40px]">

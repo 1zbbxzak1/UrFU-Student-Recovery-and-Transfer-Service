@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { getStatusClassName } from "@/app/utils/const";
 import { getFileExtensionIcon } from "@/app/utils/const";
 import { getApplicationById } from "@/app/api/application";
@@ -12,22 +11,21 @@ import { formatUpdateDate } from "@/app/utils/const";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import CreateApplication from "../../../components/CreateApplication";
+import ModalDelete from "./ModalDelete";
 
 export default function Page({ params }) {
   const numericId = parseInt(params.Check, 10);
   const [application, setApplication] = useState([]);
+  const [showModalDelete, setShowModalDelete] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
-
-  const router = useRouter();
 
   const handleDeleteApplication = async () => {
     await deleteApplicationById(numericId);
   };
 
-  const firstStatusUpdate =
-    application.statusUpdates
-      ? application.statusUpdates[application.statusUpdates.length - 1]
-      : null;
+  const firstStatusUpdate = application.statusUpdates
+    ? application.statusUpdates[application.statusUpdates.length - 1]
+    : null;
 
   const firstUpdateDate = firstStatusUpdate
     ? firstStatusUpdate.date
@@ -170,11 +168,7 @@ export default function Page({ params }) {
 
             <div className="grid grid-cols-2 mt-[60px]">
               <div />
-              <button
-                onClick={() => {
-                  handleDeleteApplication(), router.push(`/application`);
-                }}
-              >
+              <button onClick={() => setShowModalDelete(true)}>
                 <div className="w-[180px] h-[48px] bg-[#EF302B] rounded-[10px] ml-auto">
                   <div className="flex justify-center items-center py-4 text-[#FFFFFF] text-[13px] leading-[15.85px] font-semibold">
                     Удалить заявку
@@ -183,6 +177,12 @@ export default function Page({ params }) {
               </button>
             </div>
           </CreateApplication>
+          <ModalDelete
+            isVisible={showModalDelete}
+            onClose={() => setShowModalDelete(false)}
+            onDelete={() => handleDeleteApplication()}
+            href="/application"
+          ></ModalDelete>
         </section>
       </div>
       <Footer />

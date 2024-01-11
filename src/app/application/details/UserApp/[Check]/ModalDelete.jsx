@@ -2,13 +2,8 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-const ModalComment = ({ setComment, isVisible, onClose, onSend, href }) => {
+const ModalDelete = ({ isVisible, onClose, onDelete, href }) => {
   const router = useRouter();
-
-  const handleContentChange = (e) => {
-    const content = e.target.textContent;
-    setComment(content);
-  };
 
   useEffect(() => {
     const handleBodyScroll = (shouldDisableScroll) => {
@@ -31,24 +26,24 @@ const ModalComment = ({ setComment, isVisible, onClose, onSend, href }) => {
       <div className="w-[580px] flex flex-col relative">
         <div className="bg-white rounded-[20px] border border-neutral-300">
           <div className="flex flex-col justify-left items-left pt-[40px] mx-[50px]">
-            <div
-              className="u-expand-input"
-              onInput={handleContentChange}
-              contentEditable
-              placeholder="Добавьте комментарий"
-            ></div>
+            <div className="text-left text-[#222222] text-[24px] leading-[29.26px] font-semibold">
+              Удаление заявки
+            </div>
+            <div className="text-left text-[#222222] text-[16px] leading-[19.5px] font-normal mt-[15px]">
+              Вы уверены, что хотите удалить заявку?
+            </div>
           </div>
           <div className="flex flex-row mt-[40px] mb-[30px] justify-end space-x-4 mx-[50px]">
             <button
               onClick={() => {
                 onClose();
-                onSend();
+                onDelete();
                 router.push(href);
               }}
             >
-              <div className="w-[120px] h-[48px] border border-[#1E4391] rounded-lg">
-                <div className="justify-center items-center inline-flex py-4 text-[#1E4391] text-[13px] leading-[15.85px] font-medium">
-                  Отправить
+              <div className="w-[180px] h-[48px] bg-[#EF302B] rounded-[10px] ml-auto">
+                <div className="flex justify-center items-center py-4 text-[#FFFFFF] text-[13px] leading-[15.85px] font-semibold">
+                  Удалить заявку
                 </div>
               </div>
             </button>
@@ -66,4 +61,4 @@ const ModalComment = ({ setComment, isVisible, onClose, onSend, href }) => {
   );
 };
 
-export default ModalComment;
+export default ModalDelete;

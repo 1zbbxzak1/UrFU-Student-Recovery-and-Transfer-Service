@@ -1,6 +1,10 @@
+"use client";
 import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const ModalApplicationCancel = ({ isVisible, onClose, href }) => {
+  const router = useRouter();
+
   useEffect(() => {
     const handleBodyScroll = (shouldDisableScroll) => {
       document.body.style.overflow = shouldDisableScroll ? "hidden" : "auto";
@@ -35,7 +39,7 @@ const ModalApplicationCancel = ({ isVisible, onClose, href }) => {
             <button
               onClick={() => {
                 onClose();
-                window.location.href = href;
+                router.push(href);
               }}
             >
               <div className="w-[120px] h-[48px] border border-[#1E4391] rounded-lg">
