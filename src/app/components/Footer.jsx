@@ -26,9 +26,9 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <nav className="w-full mx-auto top-0 left-0 right-0 z-10 bg-[#545454]">
-      <div className="flex container lg:pt-4 flex-wrap items-center justify-between mx-auto px-4 pt-2">
-        <ul className="flex p-4 md:p-0 md:flex-row md:space-x-12 ml-[110px] mt-3">
+    <nav className="w-full px-[80px] z-10 bg-[#545454]">
+      <div className="flex lg:pt-4 flex-wrap items-center justify-between pt-2">
+        <ul className="flex md:p-0 md:flex-row md:space-x-12 mt-3">
           {footerLinks.map((link, index) => (
             <li key={index}>
               <FooterLink href={link.href} title={link.title} />
@@ -37,16 +37,16 @@ const Footer = () => {
         </ul>
         <Link
           href={"/dashboard"}
-          className="flex p-4 md:p-0 md:flex-row md:space-x-12 mr-[110px] mt-3"
+          className="inline-flex lg:pt-3 flex-wrap items-center justify-between"
         >
-          <div className="relative block pt-2 pl-3 pr-4 text-white sm:text-sm rounded md:p-0 group">
+          <div className="relative block text-white sm:text-sm rounded group md:p-0 md:flex-row md:space-x-12">
             <span className="group-hover:block absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-bottom scale-x-0 transition-transform group-hover:scale-x-100"></span>
             {"ПРОФИЛЬ"}
           </div>
         </Link>
       </div>
-      <div className="flex container flex-wrap items-center justify-between mx-auto">
-        <p className="text-white text-sm ml-[125px] my-5">
+      <div className="flex flex-wrap items-center justify-between">
+        <p className="text-white text-sm my-5">
           {currentYear}
         </p>
       </div>

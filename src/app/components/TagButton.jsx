@@ -13,14 +13,14 @@ const TagButton = ({ name, onClick, isSelected, children }) => {
 
   return (
     <button
-      className={`${buttonStyles} px-2 lg:px-6 text-xl cursor-pointer`}
+      className={`${buttonStyles} px-2 lg:px-6 text-[15px] leading-[18.29px] cursor-pointer`}
       onClick={() => onClick(name)}
     >
       {children}
       <motion.div
         animate={isSelected ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-blue-800 mt-1"
+        className="h-1 bg-[#1E4391] mt-1"
       ></motion.div>
     </button>
   );

@@ -13,7 +13,7 @@ const HeroSection = () => {
               перевода студентов УрФУ
             </h1>
             <div className="h-[0px] lg:w-[690px] relative mb-[35px] border border-white" />
-            <p className="lg:w-[690px] text-white text-xs text-left sm:text-lg lg:text-[20px] lg:leading-[24.38px] font-light">
+            <p className="lg:w-[690px] text-white text-xs text-left sm:text-lg lg:text-[16px] lg:leading-[19.5px]">
               Сделайте процесс восстановления и перевода студентов УрФУ
               удобным с нашим онлайн-сервисом. Получайте актуальную
               информацию, подавайте документы для проверки, и решайте

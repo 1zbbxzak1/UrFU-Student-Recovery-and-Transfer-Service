@@ -1,33 +1,37 @@
 .u-accordion-main {
-  border-left: 4px solid #748ab9;
-  max-width: 1120px;
+  border-left: 4px solid #1E4391;
+  max-width: auto;
   padding-left: 20px;
+  padding-right: 20px;
   position: relative;
   overflow: hidden;
 }
 .u-accordion-title-main {
   display: block;
-  max-width: 950px;
-  font-size: 28px;
+  max-width: auto;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 34.13px;
+  line-height: 19.5px;
   color: #393E46;
-  padding: 14px 0;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  padding: 10px 0;
 }
 .u-accordion-toggle-main {
   cursor: pointer;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 23px;
-  right: -3px;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  bottom: 10px;
+  right: 20px;
 }
 .u-accordion-toggle-main:after {
   position: absolute;
   content: "";
-  width: 50px;
-  height: 50px;
-  background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%231E4391' stroke-width='2'/%3E%3C/svg%3E%0A")
+  width: 40px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%231E4391' stroke-width='2'/%3E%3C/svg%3E%0A")
       no-repeat,
     url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 1C10.5523 1 11 1.44772 11 2V18C11 18.5523 10.5523 19 10 19C9.44772 19 9 18.5523 9 18V2C9 1.44772 9.44772 1 10 1Z' fill='%231E4391'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 10C1 9.44772 1.44772 9 2 9H18C18.5523 9 19 9.44772 19 10C19 10.5523 18.5523 11 18 11H2C1.44772 11 1 10.5523 1 10Z' fill='%231E4391'/%3E%3C/svg%3E%0A")
       no-repeat;
@@ -47,10 +51,11 @@
   position: relative;
   animation: 0.3s delay-elem;
   overflow: auto;
-  margin-bottom: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .u-accordion-input-main:checked ~ .u-accordion-toggle-main:after {
-  background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%231E4391' stroke-width='2'/%3E%3C/svg%3E%0A")
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%231E4391' stroke-width='2'/%3E%3C/svg%3E%0A")
       no-repeat,
     url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 10C1 9.44772 1.44772 9 2 9H18C18.5523 9 19 9.44772 19 10C19 10.5523 18.5523 11 18 11H2C1.44772 11 1 10.5523 1 10Z' fill='%231E4391'/%3E%3C/svg%3E ")
       no-repeat;
@@ -58,8 +63,9 @@
 }
 .u-accordion-content-main {
   max-height: 0;
-  max-width: 950px;
-  font-size: 18px;
+  max-width: auto;
+  margin: 0;
+  font-size: 15px;
   font-weight: 500;
   color: #2951B6;
   transition: max-height 0.3s;

@@ -106,7 +106,7 @@ const AboutSection = () => {
               Перевод
             </TagButton>
           </div>
-          <div className="w-full h-[1px] bg-neutral-400" />
+          <div className="w-full h-[1px] bg-[#D3D3D3]" />
         </div>
       </div>
       <ul ref={ref} className="mx-[64px] grid md:grid-cols-3 gap-4 md:gap-12">
